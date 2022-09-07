@@ -1,0 +1,43 @@
+.missiondetails>h2{
+    font-family: 'Oswald';
+    font-size: 25px;
+    letter-spacing: 0.6px;
+    margin-top: 20px;
+}
+.missiondetails>i{
+    float: left;
+    margin-top: 8px;
+}
+.missiondetails>p{
+padding-left: 22px;
+margin-top: 10px;
+}
+.BA-Image{
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+}
+.BeforeAfter-Details>h3{
+    font-family: 'Oswald';
+    font-size: 25px;
+    letter-spacing: 0.5px;
+}
+.BeforeAfter-Details>h2{
+    font-family: 'Oswald';
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: 0.8px;
+}
+.BeforeAfter-Details>p{
+    font-family: 'Roboto';
+    font-size: 16px;
+}
+.BeforeAfter-Details>i{
+    margin-top: -7px;
+}
+.First{
+    background-image: url(../../Assets/Material/humidifier1.jpg);
+}
+.OurMission{
+    background-image: url(../../Assets/Material/humidifier2.jpg);
+}

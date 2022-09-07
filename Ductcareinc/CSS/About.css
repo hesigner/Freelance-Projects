@@ -1,0 +1,116 @@
+
+/* Heading Div Background */
+.First {
+    background-image: url(../Assets/Backgrounds/About.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 400px;
+}
+/* Heading Heading */
+.Heading {
+    text-align: center;
+    padding-top: 120px;
+}
+
+.Heading>h1 {
+    font-family: 'Oswald';
+    font-size: 80px;
+    font-weight: 700;
+    color: #ffffff;
+
+}
+
+@media only screen and (max-width: 991px) {
+    .Heading {
+        width: 100%;
+        padding-top: 60px;
+        font-size: 16px;
+    }
+
+    .Heading>h1 {
+        font-size: 40px;
+        padding-bottom: 60px;
+    }
+
+    .First {
+        height: auto;
+    }
+}
+
+/* Heading About */
+.details {
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+.details>p {
+    text-align: left;
+    font-family: 'Roboto';
+    font-size: 18px;
+    color: rgb(87, 87, 87);
+    font-weight: 500;
+    width: 90%;
+    margin: auto;
+    margin-top: 20px;
+    line-height: 27px;
+    letter-spacing: 0.3px;
+}
+
+/* Mission Div CSS */
+.OurMission {
+    background-image: url(../Assets/Backgrounds/mission.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: auto;
+    height: 100%;
+
+
+}
+
+.missiondetails {
+    width: 550px;
+    padding-left: 50px;
+    padding-right: 50px;
+    background-color: #62e1e8e1;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    line-height: 27px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 15px 3px rgba(0, 0, 0, 0.493);
+}
+
+.missiondetails>h1 {
+    font-family: 'Oswald';
+    font-size: 35px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.missiondetails>p {
+    font-family: 'Roboto';
+    font-size: 16px;
+    font-weight: 500;
+    color: rgb(53, 53, 53);
+
+}
+
+@media only screen and (max-width: 991px) {
+    .missiondetails {
+        padding-left: 15px;
+        padding-right: 15px;
+        padding-bottom: 20px;
+        line-height: 22px;
+        margin: 10px;
+        width: 100%;
+    }
+
+    .missioncontainer {
+        padding-left: 0;
+        padding-right: 20px;
+    }
+}

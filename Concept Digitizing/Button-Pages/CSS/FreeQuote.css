@@ -1,0 +1,275 @@
+.Heading-1 {
+  text-align: center;
+  margin-top: 50px;
+}
+.container {
+  display: flex;
+  justify-content: center;
+}
+.row-large {
+  display: flex;
+  justify-content: center;
+  width: 80%;
+}
+@media (max-width: 991px) {
+  .row-large {
+    width: 100%;
+  }
+}
+.row-1 {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+.row-2 {
+  display: flex;
+  justify-content: center;
+}
+.Box-container {
+  border: 1px solid rgba(0, 0, 0, 0.158);
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.116) 1px 1px 15px 1.5px;
+  width: 100%;
+  margin: auto;
+  text-align: center;
+  padding-left: 35px;
+  padding-right: 35px;
+  margin-bottom: 3%;
+  transition: all 0.2s ease;
+}
+.Box-container:hover {
+  box-shadow: rgba(0, 0, 0, 0.247) 1px 1px 17px 1.7px;
+}
+.Box-container-Heading {
+  font-size: 28px;
+  font-weight: 700;
+  margin-top: 5px;
+  color: #525252;
+  font-family: Helvetica, sans-serif;
+}
+.Box-container-image {
+  width: 80%;
+  padding-top: 10px;
+  padding-bottom: 20px;
+  -webkit-transform: scale(1);
+  transform: scale(1);
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+}
+.Box-container-image:hover {
+  -webkit-transform: scale(1.06);
+  transform: scale(1.06);
+}
+.Box-container-btn {
+  border: none;
+  background-color: #52b1c2;
+  color: white;
+  font-size: 17px;
+  letter-spacing: 0.5px;
+  width: 180px;
+  height: 45px;
+  border-radius: 25px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  transition: all 0.2s ease;
+}
+.Box-container-btn:hover {
+  background-color: #52b1c2;
+  width: 190px;
+  box-shadow: 1px 1px 10px 0px rgba(0, 0, 0, 0.424);
+}
+
+.Box-container-form {
+  border: 1px solid rgba(0, 0, 0, 0.158);
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.116) 1px 1px 15px 1.5px;
+  margin-bottom: 3%;
+  transition: all 0.2s ease;
+  justify-content: center;
+  display: flex;
+  transition: 2s;
+}
+.Box-container-form form {
+  justify-content: center;
+  display: flex;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.form-text {
+  border: none;
+  color: black;
+  font-size: 17px;
+  letter-spacing: 0.5px;
+  padding-left: 30px;
+  width: 180px;
+  height: 40px;
+  border: 2px solid rgba(0, 0, 0, 0.24);
+  border-radius: 25px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  transition: all 0.2s ease;
+  margin-top: 10px;
+  width: 80%;
+}
+.form-file {
+  width: 80%;
+}
+.form-btn {
+  border: none;
+  background-color: #52b1c2;
+  color: white;
+  font-size: 17px;
+  letter-spacing: 0.5px;
+  width: 180px;
+  height: 45px;
+  border-radius: 25px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  transition: all 0.2s ease;
+  margin-top: 10px;
+  width: 35%;
+  margin-right: 10px;
+}
+.form-btn:hover {
+  background-color: #4da2b1;
+  width: 36%;
+  box-shadow: 1px 1px 10px 0px rgba(0, 0, 0, 0.424);
+}
+
+.form-btn-close {
+  border: none;
+  background-color: #da7455;
+  color: white;
+  font-size: 17px;
+  letter-spacing: 0.5px;
+  width: 180px;
+  height: 45px;
+  border-radius: 25px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  transition: all 0.2s ease;
+  margin-top: 10px;
+  width: 35%;
+}
+.form-btn-close:hover {
+  background-color: #c76a4e;
+  width: 36%;
+  box-shadow: 1px 1px 10px 0px rgba(0, 0, 0, 0.424);
+}
+
+.displaynone {
+  display: none;
+  transition: 1s;
+}
+
+.file-upload {
+  display: block;
+  text-align: center;
+  font-family: Helvetica, Arial, sans-serif;
+  text-align: left;
+  font-size: 12px;
+}
+.file-upload .file-select {
+  border: none;
+  color: black;
+  font-size: 17px;
+  letter-spacing: 0.5px;
+  height: 40px;
+  border: 2px solid rgba(0, 0, 0, 0.24);
+  border-radius: 25px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  transition: all 0.2s ease;
+  margin-top: 10px;
+  width: 350px;
+  overflow: hidden;
+}
+.file-upload .file-select .file-select-button {
+  background: #b4b4b4;
+  color: white;
+  padding: 0 10px;
+  display: inline-block;
+  height: 40px;
+  line-height: 40px;
+}
+.file-select-button {
+  background: #47b3e6;
+  padding: 0 10px;
+  display: inline-block;
+  height: 40px;
+  line-height: 40px;
+}
+.file-upload .file-select .file-select-name {
+  line-height: 40px;
+  display: inline-block;
+  padding: 0 10px;
+}
+.file-upload .file-select:hover {
+  border-color: #959595;
+  transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -webkit-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+}
+.file-upload .file-select:hover .file-select-button {
+  background: #7a7a7a;
+  color: #ffffff;
+  transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -webkit-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+}
+.file-upload.active .file-select {
+  border-color: #3fa46a;
+  transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -webkit-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+}
+.file-upload.active .file-select .file-select-button {
+  background: #3fa46a;
+  color: #ffffff;
+  transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -webkit-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+}
+.file-upload .file-select input[type="file"] {
+  z-index: 100;
+  cursor: pointer;
+  position: absolute;
+  width: 100%;
+  opacity: 0;
+  filter: alpha(opacity=0);
+}
+.file-upload .file-select.file-select-disabled {
+  opacity: 0.65;
+}
+.file-upload .file-select.file-select-disabled:hover {
+  cursor: default;
+  display: block;
+  border: 2px solid #dce4ec;
+  color: #34495e;
+  cursor: pointer;
+  height: 40px;
+  line-height: 40px;
+  margin-top: 5px;
+  text-align: left;
+  background: #ffffff;
+  overflow: hidden;
+  position: relative;
+}
+.file-upload .file-select.file-select-disabled:hover .file-select-button {
+  background: #dce4ec;
+  color: #666666;
+  padding: 0 10px;
+  display: inline-block;
+  height: 40px;
+  line-height: 40px;
+}
+.file-upload .file-select.file-select-disabled:hover .file-select-name {
+  line-height: 40px;
+  display: inline-block;
+  padding: 0 10px;
+}

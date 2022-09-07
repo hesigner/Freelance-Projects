@@ -1,0 +1,119 @@
+.PackagesDetails{
+    background-color: #02243a;
+    color: white;
+    padding: 40px;
+    padding-bottom: 20px;
+    height: auto;
+    box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.185);
+    border-radius: 10px;
+}
+.PackagesDetails>h1{
+    font-size: 40px;
+    font-family: 'Oswald';
+    padding-bottom: 10px;
+}
+.PackagesDetails>p{
+    font-size: 18px;
+    font-family: 'Roboto';
+    padding-bottom: 10px;
+    font-weight: 500;
+}
+.PackagesDetails>h2{
+    font-size: 19px;
+    font-family: 'Oswald';
+    padding-bottom: 10px;
+    padding-left: 25px;
+    letter-spacing: 0.5px;
+    line-height: 30px;
+}
+.PackagesDetails>a{
+    text-decoration: none;
+    color: #02243a;
+    font-family: 'Oswald';
+    font-size: 23px;
+    font-weight: 700;
+    background-color: #62E1E8;
+    padding: 20px;
+    width: 500px;
+    text-align: center;
+    margin-bottom: 10px;
+    margin-right: 10px;
+    border-radius: 7px;
+    display: flex;
+}
+
+.package1{
+    width: 50%;
+}
+.package2{
+    float: right;    
+    width: 50%;
+    margin-top: -140px;
+}
+.Packages>i{
+    font-size: 16px;
+    padding-top: 10px;
+    float: left;
+}
+.Packages>h2{
+    font-size: 19px;
+    font-family: 'Oswald';
+    padding-bottom: 10px;
+    padding-left: 25px;
+    letter-spacing: 0.5px;
+    line-height: 30px;
+}
+.Packages>i{
+    font-size: 16px;
+    padding-top: 5px;
+    float: left;
+}
+@media only screen and (max-width: 991px) {
+    .package1{
+        width: 100%;
+    }
+    .package2{
+        float: none;    
+        width: 100%;
+        margin-top: 10px;
+    }
+    .PackagesDetails>a{
+        width: auto;
+        font-size: 18px;
+
+    }
+}
+
+.faq{
+    margin-top: 60px;
+}
+.faq>h1{
+    font-family: 'Oswald';
+    font-size: 45px;
+    letter-spacing: 1px;
+    font-weight: 700;
+}
+.faq>p{
+    font-family: 'Roboto';
+    font-size: 16px;
+    letter-spacing: 1px;
+    line-height: 25px;
+    margin-top: 20px;
+    color: rgba(0, 0, 0, 0.63);
+    font-weight: 600;
+    padding-bottom: 30px;
+    border-bottom: 2px solid #62e1e8bb;
+}
+.faq>h2{
+    font-family: 'Oswald';
+    font-size: 25px;
+    letter-spacing: 1px;
+    margin-top: 30px;
+    font-weight: 600;
+    color: rgba(0, 0, 0, 0.815);
+
+}
+
+.First{
+    background-image: url(../Assets/Material/D2.jpg);
+}

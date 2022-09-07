@@ -1,0 +1,154 @@
+.htp-first{
+    background-image: url(../Assets/Backgrounds/Prepare.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 400px;
+}
+.htp-heading{
+    width: 80%;
+    padding-top: 90px;
+    margin: auto;
+}
+.htp-heading>h1{
+    color: white;
+}
+@media only screen and (max-width: 991px) {
+    .htp-heading{
+        padding-top: 60px;
+        width: 100%;
+    }
+    .htp-heading>h1{
+        font-size: 35px;
+    }
+}
+.BeforeWeArrive{
+    background-color: #62E1E8;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    color: #02243a;
+    
+}
+.BWA{
+    border: 3px solid white;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-bottom: 20px;
+    padding-Top: 20px;
+    height: 200px;
+    width: 100%;
+}
+.BWA1{
+    border: 3px solid white;
+    border-right: 0px;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-bottom: 20px;
+    padding-Top: 20px;
+    height: 200px;
+    width: 100%;
+}
+.BWA2{
+    border: 3px solid white;
+    border-bottom: 0px;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-bottom: 20px;
+    padding-Top: 20px;
+    height: 200px;
+    width: 100%;
+}
+.BWA1>h1,
+.BWA2>h1,
+.BWA>h1{
+    font-size: 35px;
+    font-family: 'Oswald';
+}
+.BWA1>p,
+.BWA2>p,
+.BWA>p{
+    font-size: 16px;
+    font-family: 'Roboto';
+}
+
+@media only screen and (max-width: 991px) {
+    .BWA{
+        border: 3px solid white;
+        height: auto;
+        width: auto;
+        margin: 7px;
+    }
+    .BWA1{
+        border: 3px solid white;
+        border-right: 3px solid white;
+        height: auto;
+        height: auto;
+        width: auto;
+        margin: 7px;
+    }
+    .BWA2{
+        border: 3px solid white;
+        border-bottom: 3px solid white;
+        height: auto;
+        width: auto;
+        margin: 7px;
+    }
+    .htp-first{
+
+        height: auto;
+    }
+}
+.BA-Image{
+    width: auto;
+    margin: 0px;
+    padding: 0px;
+    height: 100%;
+    margin-top: -0.5px;
+    box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.185);
+
+}
+.BeforeAfter-Details{
+    background-color: #02243a;
+    color: white;
+    padding: 40px;
+    height: auto;
+    box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.185);
+
+}
+.BeforeAfter-Details>h1{
+    font-size: 40px;
+    font-family: 'Oswald';
+    padding-bottom: 10px;
+}
+.BeforeAfter-Details>p{
+    font-size: 18px;
+    font-family: 'Roboto';
+    padding-bottom: 10px;
+    font-weight: 500;
+}
+.BeforeAfter-Details>h2{
+    font-size: 16px;
+    font-family: 'Oswald';
+    padding-bottom: 10px;
+    padding-left: 25px;
+    letter-spacing: 0.5px;
+    line-height: 20px;
+}
+.BeforeAfter-Details>i{
+    font-size: 16px;
+    padding-top: 10px;
+    float: left;
+}
+@media only screen and (max-width: 991px) {
+    .BA-Image{
+        width: 100%;
+        height: 100%;
+        margin-top: -0.5px;
+        padding-bottom: 5px;
+    }
+}
+
+.First{
+    background-image: url(../Assets/Material/d3.jpg);
+}

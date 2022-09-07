@@ -1,0 +1,37 @@
+#activedropdown{
+    color: #011b2c;
+}
+.missiondetails{
+    width: 55%;
+    background-color: rgba(0, 0, 0, 0.692);
+    color: white;
+}
+.missiondetails>p{
+    color: rgb(212, 211, 211);
+    }
+@media only screen and (max-width: 991px) {
+    .missiondetails{
+        width: 100%;
+
+    }
+}
+.BeforeAfter-Details>h1{
+    font-size: 35px;
+}
+.BeforeAfter-Details>p{
+    font-size: 17px;
+}
+.BeforeAfter-Details>i{
+    margin-top: -4px;
+}
+.First{
+    background-image: url(../../Assets/Material/vent1.jpg);
+}
+.OurMission{
+    background-image: url(../../Assets/Material/Vent2.jpg);
+}
+.BA-Image{
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+}

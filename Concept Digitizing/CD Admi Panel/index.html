@@ -1,0 +1,1856 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- CSS Links -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="Css/Stylesheet.css">
+  <script src="JavaScript/Script.js"></script>
+  <title>Admin Dashboard</title>
+</head>
+
+<body>
+  <div class="navbar">
+    <div class="left">
+      <img class="logo" src="Assets/Logo.png" alt="">
+      <button class="navbarbtnbox" onclick="togglesidebar()">
+        <svg class="navbarbtn" xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-list"
+          viewBox="0 0 16 16">
+          <path fill-rule="evenodd"
+            d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z" />
+        </svg>
+      </button>
+    </div>
+    <div class="right">
+      <div class="AccountBox">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+          <path
+            d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+        </svg>
+        <img class="flag" src="Assets/Flag.png" alt="">
+        <img class="dp" src="https://www.seekpng.com/png/detail/847-8474751_download-empty-profile.png" alt="">
+      </div>
+    </div>
+  </div>
+
+  <div class="sidebar" id="sidebar">
+    <div class="profilebox">
+      <img src="https://www.seekpng.com/png/detail/847-8474751_download-empty-profile.png" alt="">
+      <h1>Hassan Mujtaba</h1>
+      <h2>Admin</h2>
+      <div class="profilebox-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-gear-fill" viewBox="0 0 16 16">
+          <path
+            d="M9.405 1.05c-.413-1.4-2.397-1.4-2.81 0l-.1.34a1.464 1.464 0 0 1-2.105.872l-.31-.17c-1.283-.698-2.686.705-1.987 1.987l.169.311c.446.82.023 1.841-.872 2.105l-.34.1c-1.4.413-1.4 2.397 0 2.81l.34.1a1.464 1.464 0 0 1 .872 2.105l-.17.31c-.698 1.283.705 2.686 1.987 1.987l.311-.169a1.464 1.464 0 0 1 2.105.872l.1.34c.413 1.4 2.397 1.4 2.81 0l.1-.34a1.464 1.464 0 0 1 2.105-.872l.31.17c1.283.698 2.686-.705 1.987-1.987l-.169-.311a1.464 1.464 0 0 1 .872-2.105l.34-.1c1.4-.413 1.4-2.397 0-2.81l-.34-.1a1.464 1.464 0 0 1-.872-2.105l.17-.31c.698-1.283-.705-2.686-1.987-1.987l-.311.169a1.464 1.464 0 0 1-2.105-.872l-.1-.34zM8 10.93a2.929 2.929 0 1 1 0-5.86 2.929 2.929 0 0 1 0 5.858z" />
+        </svg>
+        <svg xmlns="http://www.w3.org/2000/svg" style="stroke: wrgb(7, 7, 7); color: white;
+                stroke-width: 1;" fill="currentColor" class="bi bi-power" viewBox="0 0 16 16">
+          <path d="M7.5 1v7h1V1h-1z" />
+          <path d="M3 8.812a4.999 4.999 0 0 1 2.578-4.375l-.485-.874A6 6 0 1 0 11 3.616l-.501.865A5 5 0 1 1 3 8.812z" />
+        </svg>
+      </div>
+    </div>
+    <div class="sidebar-items">
+      <h1>QUOTES</h1>
+      <ul>
+        <li onclick="showTodaysQuote()">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-calendar-check" viewBox="0 0 16 16">
+            <path
+              d="M10.854 7.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7.5 9.793l2.646-2.647a.5.5 0 0 1 .708 0z" />
+            <path
+              d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4H1z" />
+          </svg>
+          Today's Quotes
+        </li>
+        <li onclick="showReadyQuote()">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-check2-circle" viewBox="0 0 16 16">
+            <path
+              d="M2.5 8a5.5 5.5 0 0 1 8.25-4.764.5.5 0 0 0 .5-.866A6.5 6.5 0 1 0 14.5 8a.5.5 0 0 0-1 0 5.5 5.5 0 1 1-11 0z" />
+            <path
+              d="M15.354 3.354a.5.5 0 0 0-.708-.708L8 9.293 5.354 6.646a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l7-7z" />
+          </svg>
+          Ready Quotes
+        </li>
+        <li onclick="showAllQuote()">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-archive" viewBox="0 0 16 16">
+            <path
+              d="M0 2a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1v7.5a2.5 2.5 0 0 1-2.5 2.5h-9A2.5 2.5 0 0 1 1 12.5V5a1 1 0 0 1-1-1V2zm2 3v7.5A1.5 1.5 0 0 0 3.5 14h9a1.5 1.5 0 0 0 1.5-1.5V5H2zm13-3H1v2h14V2zM5 7.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5z" />
+          </svg>
+          All Quotes
+        </li>
+        <li onclick="showConvertOrder()">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-capslock" viewBox="0 0 16 16">
+            <path fill-rule="evenodd"
+              d="M7.27 1.047a1 1 0 0 1 1.46 0l6.345 6.77c.6.638.146 1.683-.73 1.683H11.5v1a1 1 0 0 1-1 1h-5a1 1 0 0 1-1-1v-1H1.654C.78 9.5.326 8.455.924 7.816L7.27 1.047zM14.346 8.5 8 1.731 1.654 8.5H4.5a1 1 0 0 1 1 1v1h5v-1a1 1 0 0 1 1-1h2.846zm-9.846 5a1 1 0 0 1 1-1h5a1 1 0 0 1 1 1v1a1 1 0 0 1-1 1h-5a1 1 0 0 1-1-1v-1zm6 0h-5v1h5v-1z" />
+          </svg>
+          Convert To Order
+        </li>
+      </ul>
+
+      <h1>ORDERS</h1>
+      <ul>
+        <li onclick="showTodaysOrder()">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-calendar-check" viewBox="0 0 16 16">
+            <path
+              d="M10.854 7.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7.5 9.793l2.646-2.647a.5.5 0 0 1 .708 0z" />
+            <path
+              d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4H1z" />
+          </svg>
+          Today's Orders
+        </li>
+        <li onclick="showReadyOrder()">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-check2-circle" viewBox="0 0 16 16">
+            <path
+              d="M2.5 8a5.5 5.5 0 0 1 8.25-4.764.5.5 0 0 0 .5-.866A6.5 6.5 0 1 0 14.5 8a.5.5 0 0 0-1 0 5.5 5.5 0 1 1-11 0z" />
+            <path
+              d="M15.354 3.354a.5.5 0 0 0-.708-.708L8 9.293 5.354 6.646a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l7-7z" />
+          </svg>
+          Ready Orders
+        </li>
+        <li onclick="showAllOrder()">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-archive" viewBox="0 0 16 16">
+            <path
+              d="M0 2a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1v7.5a2.5 2.5 0 0 1-2.5 2.5h-9A2.5 2.5 0 0 1 1 12.5V5a1 1 0 0 1-1-1V2zm2 3v7.5A1.5 1.5 0 0 0 3.5 14h9a1.5 1.5 0 0 0 1.5-1.5V5H2zm13-3H1v2h14V2zM5 7.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5z" />
+          </svg>
+          All Orders
+        </li>
+        <li onclick="showOrderWithPrice0()">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-asterisk" viewBox="0 0 16 16">
+            <path
+              d="M8 0a1 1 0 0 1 1 1v5.268l4.562-2.634a1 1 0 1 1 1 1.732L10 8l4.562 2.634a1 1 0 1 1-1 1.732L9 9.732V15a1 1 0 1 1-2 0V9.732l-4.562 2.634a1 1 0 1 1-1-1.732L6 8 1.438 5.366a1 1 0 0 1 1-1.732L7 6.268V1a1 1 0 0 1 1-1z" />
+          </svg>
+          Orders With Price 0$
+        </li>
+        <li onclick="showOrderWithPrice()">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-currency-dollar" viewBox="0 0 16 16">
+            <path
+              d="M4 10.781c.148 1.667 1.513 2.85 3.591 3.003V15h1.043v-1.216c2.27-.179 3.678-1.438 3.678-3.3 0-1.59-.947-2.51-2.956-3.028l-.722-.187V3.467c1.122.11 1.879.714 2.07 1.616h1.47c-.166-1.6-1.54-2.748-3.54-2.875V1H7.591v1.233c-1.939.23-3.27 1.472-3.27 3.156 0 1.454.966 2.483 2.661 2.917l.61.162v4.031c-1.149-.17-1.94-.8-2.131-1.718H4zm3.391-3.836c-1.043-.263-1.6-.825-1.6-1.616 0-.944.704-1.641 1.8-1.828v3.495l-.2-.05zm1.591 1.872c1.287.323 1.852.859 1.852 1.769 0 1.097-.826 1.828-2.2 1.939V8.73l.348.086z" />
+          </svg>
+          Orders With Price
+        </li>
+      </ul>
+
+      <h1>VECTORS</h1>
+      <ul>
+        <li onclick="showTodaysVector()">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-calendar-check" viewBox="0 0 16 16">
+            <path
+              d="M10.854 7.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7.5 9.793l2.646-2.647a.5.5 0 0 1 .708 0z" />
+            <path
+              d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4H1z" />
+          </svg>
+          Today's Vectors
+        </li>
+        <li onclick="showReadyVector()">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-check2-circle" viewBox="0 0 16 16">
+            <path
+              d="M2.5 8a5.5 5.5 0 0 1 8.25-4.764.5.5 0 0 0 .5-.866A6.5 6.5 0 1 0 14.5 8a.5.5 0 0 0-1 0 5.5 5.5 0 1 1-11 0z" />
+            <path
+              d="M15.354 3.354a.5.5 0 0 0-.708-.708L8 9.293 5.354 6.646a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l7-7z" />
+          </svg>
+          Ready Vectors
+        </li>
+        <li onclick="showAllVectors()">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-archive" viewBox="0 0 16 16">
+            <path
+              d="M0 2a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1v7.5a2.5 2.5 0 0 1-2.5 2.5h-9A2.5 2.5 0 0 1 1 12.5V5a1 1 0 0 1-1-1V2zm2 3v7.5A1.5 1.5 0 0 0 3.5 14h9a1.5 1.5 0 0 0 1.5-1.5V5H2zm13-3H1v2h14V2zM5 7.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5z" />
+          </svg>
+          All Vectors
+        </li>
+        <li onclick="showVectorWithPrice0()">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-asterisk" viewBox="0 0 16 16">
+            <path
+              d="M8 0a1 1 0 0 1 1 1v5.268l4.562-2.634a1 1 0 1 1 1 1.732L10 8l4.562 2.634a1 1 0 1 1-1 1.732L9 9.732V15a1 1 0 1 1-2 0V9.732l-4.562 2.634a1 1 0 1 1-1-1.732L6 8 1.438 5.366a1 1 0 0 1 1-1.732L7 6.268V1a1 1 0 0 1 1-1z" />
+          </svg>
+          Vectors With Price 0$
+        </li>
+        <li onclick="showVectorWithPrice()">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-currency-dollar" viewBox="0 0 16 16">
+            <path
+              d="M4 10.781c.148 1.667 1.513 2.85 3.591 3.003V15h1.043v-1.216c2.27-.179 3.678-1.438 3.678-3.3 0-1.59-.947-2.51-2.956-3.028l-.722-.187V3.467c1.122.11 1.879.714 2.07 1.616h1.47c-.166-1.6-1.54-2.748-3.54-2.875V1H7.591v1.233c-1.939.23-3.27 1.472-3.27 3.156 0 1.454.966 2.483 2.661 2.917l.61.162v4.031c-1.149-.17-1.94-.8-2.131-1.718H4zm3.391-3.836c-1.043-.263-1.6-.825-1.6-1.616 0-.944.704-1.641 1.8-1.828v3.495l-.2-.05zm1.591 1.872c1.287.323 1.852.859 1.852 1.769 0 1.097-.826 1.828-2.2 1.939V8.73l.348.086z" />
+          </svg>
+          Vectors With Price
+        </li>
+      </ul>
+
+      <h1>CUSTOMERS</h1>
+      <ul>
+        <li onclick="showCustomers()">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
+            <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
+            <path fill-rule="evenodd"
+              d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z" />
+          </svg>
+
+          Customers
+        </li>
+        <li onclick="Showallcustomers()">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-person-lines-fill"
+            viewBox="0 0 16 16">
+            <path
+              d="M6 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-5 6s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H1zM11 3.5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1h-4a.5.5 0 0 1-.5-.5zm.5 2.5a.5.5 0 0 0 0 1h4a.5.5 0 0 0 0-1h-4zm2 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1h-2zm0 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1h-2z" />
+          </svg>
+          All Customers
+        </li>
+        <li onclick="showdesigners()">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-droplet-half" viewBox="0 0 16 16">
+            <path fill-rule="evenodd"
+              d="M7.21.8C7.69.295 8 0 8 0c.109.363.234.708.371 1.038.812 1.946 2.073 3.35 3.197 4.6C12.878 7.096 14 8.345 14 10a6 6 0 0 1-12 0C2 6.668 5.58 2.517 7.21.8zm.413 1.021A31.25 31.25 0 0 0 5.794 3.99c-.726.95-1.436 2.008-1.96 3.07C3.304 8.133 3 9.138 3 10c0 0 2.5 1.5 5 .5s5-.5 5-.5c0-1.201-.796-2.157-2.181-3.7l-.03-.032C9.75 5.11 8.5 3.72 7.623 1.82z" />
+            <path fill-rule="evenodd"
+              d="M4.553 7.776c.82-1.641 1.717-2.753 2.093-3.13l.708.708c-.29.29-1.128 1.311-1.907 2.87l-.894-.448z" />
+          </svg>
+          Designers
+        </li>
+        <li onclick="showsalesmanprogress()">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-clipboard2-pulse"
+            viewBox="0 0 16 16">
+            <path
+              d="M9.5 0a.5.5 0 0 1 .5.5.5.5 0 0 0 .5.5.5.5 0 0 1 .5.5V2a.5.5 0 0 1-.5.5h-5A.5.5 0 0 1 5 2v-.5a.5.5 0 0 1 .5-.5.5.5 0 0 0 .5-.5.5.5 0 0 1 .5-.5h3Z" />
+            <path
+              d="M3 2.5a.5.5 0 0 1 .5-.5H4a.5.5 0 0 0 0-1h-.5A1.5 1.5 0 0 0 2 2.5v12A1.5 1.5 0 0 0 3.5 16h9a1.5 1.5 0 0 0 1.5-1.5v-12A1.5 1.5 0 0 0 12.5 1H12a.5.5 0 0 0 0 1h.5a.5.5 0 0 1 .5.5v12a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5v-12Z" />
+            <path
+              d="M9.979 5.356a.5.5 0 0 0-.968.04L7.92 10.49l-.94-3.135a.5.5 0 0 0-.926-.08L4.69 10H4.5a.5.5 0 0 0 0 1H5a.5.5 0 0 0 .447-.276l.936-1.873 1.138 3.793a.5.5 0 0 0 .968-.04L9.58 7.51l.94 3.135A.5.5 0 0 0 11 11h.5a.5.5 0 0 0 0-1h-.128L9.979 5.356Z" />
+          </svg>
+          Sales Man Progress
+        </li>
+        <li onclick="showorderreport()">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-clipboard-data" viewBox="0 0 16 16">
+            <path
+              d="M4 11a1 1 0 1 1 2 0v1a1 1 0 1 1-2 0v-1zm6-4a1 1 0 1 1 2 0v5a1 1 0 1 1-2 0V7zM7 9a1 1 0 0 1 2 0v3a1 1 0 1 1-2 0V9z" />
+            <path
+              d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1v-1z" />
+            <path
+              d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3z" />
+          </svg>
+          Orders Report
+        </li>
+        <li onclick="showcustomerreport()">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-file-earmark-bar-graph"
+            viewBox="0 0 16 16">
+            <path
+              d="M10 13.5a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-6a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v6zm-2.5.5a.5.5 0 0 1-.5-.5v-4a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v4a.5.5 0 0 1-.5.5h-1zm-3 0a.5.5 0 0 1-.5-.5v-2a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-.5.5h-1z" />
+            <path
+              d="M14 14V4.5L9.5 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2zM9.5 3A1.5 1.5 0 0 0 11 4.5h2V14a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h5.5v2z" />
+          </svg>
+          Cutomers Report
+        </li>
+        <li onclick="showcompanyreport()">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-bar-chart-line-fill"
+            viewBox="0 0 16 16">
+            <path
+              d="M11 2a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v12h.5a.5.5 0 0 1 0 1H.5a.5.5 0 0 1 0-1H1v-3a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v3h1V7a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v7h1V2z" />
+          </svg>
+          Company Report
+        </li>
+      </ul>
+
+      <h1>CALLING</h1>
+      <ul>
+        <li onclick="showcallinghistory()">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-clock-history" viewBox="0 0 16 16">
+            <path
+              d="M8.515 1.019A7 7 0 0 0 8 1V0a8 8 0 0 1 .589.022l-.074.997zm2.004.45a7.003 7.003 0 0 0-.985-.299l.219-.976c.383.086.76.2 1.126.342l-.36.933zm1.37.71a7.01 7.01 0 0 0-.439-.27l.493-.87a8.025 8.025 0 0 1 .979.654l-.615.789a6.996 6.996 0 0 0-.418-.302zm1.834 1.79a6.99 6.99 0 0 0-.653-.796l.724-.69c.27.285.52.59.747.91l-.818.576zm.744 1.352a7.08 7.08 0 0 0-.214-.468l.893-.45a7.976 7.976 0 0 1 .45 1.088l-.95.313a7.023 7.023 0 0 0-.179-.483zm.53 2.507a6.991 6.991 0 0 0-.1-1.025l.985-.17c.067.386.106.778.116 1.17l-1 .025zm-.131 1.538c.033-.17.06-.339.081-.51l.993.123a7.957 7.957 0 0 1-.23 1.155l-.964-.267c.046-.165.086-.332.12-.501zm-.952 2.379c.184-.29.346-.594.486-.908l.914.405c-.16.36-.345.706-.555 1.038l-.845-.535zm-.964 1.205c.122-.122.239-.248.35-.378l.758.653a8.073 8.073 0 0 1-.401.432l-.707-.707z" />
+            <path d="M8 1a7 7 0 1 0 4.95 11.95l.707.707A8.001 8.001 0 1 1 8 0v1z" />
+            <path
+              d="M7.5 3a.5.5 0 0 1 .5.5v5.21l3.248 1.856a.5.5 0 0 1-.496.868l-3.5-2A.5.5 0 0 1 7 9V3.5a.5.5 0 0 1 .5-.5z" />
+          </svg>
+          Call History
+        </li>
+      </ul>
+
+      <h1>EMPLOYEE</h1>
+      <ul class="pb-5">
+        <li onclick="showemployee()">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-person-workspace"
+            viewBox="0 0 16 16">
+            <path d="M4 16s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1H4Zm4-5.95a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5Z" />
+            <path
+              d="M2 1a2 2 0 0 0-2 2v9.5A1.5 1.5 0 0 0 1.5 14h.653a5.373 5.373 0 0 1 1.066-2H1V3a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v9h-2.219c.554.654.89 1.373 1.066 2h.653a1.5 1.5 0 0 0 1.5-1.5V3a2 2 0 0 0-2-2H2Z" />
+          </svg>
+          Employee
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="pagebody" id="pagebody" style="padding-left: 300px;">
+
+    <div class="Pages">
+      <!-- Dashboard -->
+      <div class="admindashboard row" id="dashboard">
+        <div class="FirstBar col-12">
+          <img src="" alt="">
+          <h1>Welcome Back!</h1>
+          <p>Todays Date</p>
+        </div>
+        <div class="col-4 pr-3 pl-0">
+          <div class="SecondBar">
+          <img src="" alt="">
+          <h1>Total Customers</h1>
+          <p>0,00</p>
+        </div>
+        </div>
+        <div class="col-4 pr-3 pl-0">
+        <div class="ThirdBar">
+          <img src="" alt="">
+          <h1>Total Orders</h1>
+          <p>0,00</p>
+        </div>
+      </div>
+      <div class="col-4 pr-0 pl-0">
+        <div class="FourthBar">
+          <img src="" alt="">
+          <h1>Total Ammount Earned "This Month"</h1>
+          <p>0,00</p>
+        </div>
+      </div>
+      
+      </div>
+      <!-- End -->
+
+    <!-- Today Quotes -->
+      <div id="TodaysQuote" style="display:none;">
+        <h1 class="pageheading">Todays Quotes</h1>
+        <div class="OrderTables">
+          <h1>Filter Option</h1>
+          <h2>Search Record with respective input fields</h2>
+          <div class="searchcontainer">
+            <input type="text" name="" id="" placeholder="Search By Order Name">
+            <input type="text" name="" id="" placeholder="Search By Order No">
+            <input type="text" name="" id="" placeholder="Search By Order Date">
+          </div>
+          <div class="tableinner">
+            <table class="table table-bordered">
+              <thead class="thead-dark">
+                <tr>
+                  <th scope="col">S#</th>
+                  <th scope="col">Quote#</th>
+                  <th scope="col">Assign To</th>
+                  <th scope="col">Received Date</th>
+                  <th scope="col">Customer Nick</th>
+                  <th scope="col">Quote Name</th>
+                  <th scope="col">Process</th>
+                  <th scope="col">Delete</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">1</th>
+                  <td>Test</td>
+                  <td>Test</td>
+                  <td>Test</td>
+                  <td>01/01/200</td>
+                  <td>Test</td>
+                  <td>Test</td>
+                  <td>Test</td>
+                </tr>
+                <tr>
+                  <th scope="row">2</th>
+                  <td>Test</td>
+                  <td>Test</td>
+                  <td>Test</td>
+                  <td>01/01/200</td>
+                  <td>Test</td>
+                  <td>Test</td>
+                  <td>Test</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End -->
+    <!-- ReadyQuote -->
+    <div id="ReadyQuotes" style="display:none ;">
+      <h1 class="pageheading">Ready Quotes</h1>
+      <div class="OrderTables">
+        <h1>Filter Option</h1>
+        <h2>Search Record with respective input fields</h2>
+        <div class="searchcontainer">
+          <input type="text" name="" id="" placeholder="Search By Order Name">
+          <input type="text" name="" id="" placeholder="Search By Order No">
+          <input type="text" name="" id="" placeholder="Search By Order Date">
+        </div>
+        <div class="tableinner">
+          <table class="table table-bordered">
+            <thead class="thead-dark">
+              <tr>
+                <th scope="col">S#</th>
+                <th scope="col">Quote#</th>
+                <th scope="col">Assign To</th>
+                <th scope="col">Received Date</th>
+                <th scope="col">Quote Status</th>
+                <th scope="col">Customer Nick</th>
+                <th scope="col">Quote Name</th>
+                <th scope="col">Process</th>
+                <th scope="col">Delete</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">1</th>
+                <td>Test</td>
+                <td>Test</td>
+                <td>Test</td>
+                <td>01/01/200</td>
+                <td>Test</td>
+                <td>Test</td>
+                <td>Test</td>
+                <td>Test</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    <!-- All Quotes -->
+    <div id="AllQuotes" style="display: none;">
+      <h1 class="pageheading">All Quotes</h1>
+      <div class="OrderTables">
+        <h1>Filter Option</h1>
+        <h2>Search Record with respective input fields</h2>
+        <div class="searchcontainer">
+          <input type="text" name="" id="" placeholder="Search By Order Name">
+          <input type="text" name="" id="" placeholder="Search By Order No">
+          <input type="text" name="" id="" placeholder="Search By Order Date">
+        </div>
+        <div class="tableinner">
+          <table class="table table-bordered">
+            <thead class="thead-dark">
+              <tr>
+                <th scope="col">S#</th>
+                <th scope="col">Quote#</th>
+                <th scope="col">Assign To</th>
+                <th scope="col">Received Date</th>
+                <th scope="col">Quote Status</th>
+                <th scope="col">Customer Nick</th>
+                <th scope="col">Quote Name</th>
+                <th scope="col">Process</th>
+                <th scope="col">Delete</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">1</th>
+                <td>Test</td>
+                <td>Test</td>
+                <td>Test</td>
+                <td>01/01/200</td>
+                <td>Test</td>
+                <td>Test</td>
+                <td>Test</td>
+                <td>Test</td>
+              </tr>
+              <tr>
+                <th scope="row">2</th>
+                <td>Test</td>
+                <td>Test</td>
+                <td>Test</td>
+                <td>01/01/200</td>
+                <td>Test</td>
+                <td>Test</td>
+                <td>Test</td>
+                <td>Test</td>
+              </tr>
+              <tr>
+                <th scope="row">3</th>
+                <td>Test</td>
+                <td>Test</td>
+                <td>Test</td>
+                <td>01/01/200</td>
+                <td>Test</td>
+                <td>Test</td>
+                <td>Test</td>
+                <td>Test</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  <!-- Convert To Order -->
+  <div id="ConvertOrder" style="display: none;">
+    <h1 class="pageheading">Convert To Order</h1>
+    <div class="OrderTables">
+      <h1>Filter Option</h1>
+      <h2>Search Record with respective input fields</h2>
+      <div class="searchcontainer">
+        <input type="text" name="" id="" placeholder="Search By Order Name">
+        <input type="text" name="" id="" placeholder="Search By Order No">
+        <input type="text" name="" id="" placeholder="Search By Order Date">
+      </div>
+      <div class="tableinner">
+        <table class="table table-bordered">
+          <thead class="thead-dark">
+            <tr>
+              <th scope="col">S#</th>
+              <th scope="col">Order#</th>
+              <th scope="col">O.Status</th>
+              <th scope="col">Received Date</th>
+              <th scope="col">Send Date</th>
+              <th scope="col">Customer Nick</th>
+              <th scope="col">Order Name</th>
+              <th scope="col">Convert To Order</th>
+              <th scope="col">Order Status</th>
+              <th scope="col">Assign To</th>
+              <th scope="col">Process</th>
+              <th scope="col">Delete</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">1</th>
+              <td>Test</td>
+              <td>Test</td>
+              <td>Test</td>
+              <td>01/01/200</td>
+              <td>Test</td>
+              <td>Test</td>
+              <td>Test</td>
+              <td>Test</td>
+              <td>Test</td>
+              <td>Test</td>
+              <td>Test</td>
+            </tr>
+            <tr>
+              <th scope="row">2</th>
+              <td>Test</td>
+              <td>Test</td>
+              <td>Test</td>
+              <td>01/01/200</td>
+              <td>Test</td>
+              <td>Test</td>
+              <td>Test</td>
+              <td>Test</td>
+              <td>Test</td>
+              <td>Test</td>
+              <td>Test</td>
+            </tr>
+            <tr>
+              <th scope="row">3</th>
+              <td>Test</td>
+              <td>Test</td>
+              <td>Test</td>
+              <td>01/01/200</td>
+              <td>Test</td>
+              <td>Test</td>
+              <td>Test</td>
+              <td>Test</td>
+              <td>Test</td>
+              <td>Test</td>
+              <td>Test</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+  <!-- Todays Order -->
+  <div id="TodaysOrder" style="display:none ;">
+    <h1 class="pageheading">Todays Order</h1>
+    <div class="OrderTables">
+      <h1>Filter Option</h1>
+      <h2>Search Record with respective input fields</h2>
+      <div class="searchcontainer">
+        <input type="text" name="" id="" placeholder="Search By Order Name">
+        <input type="text" name="" id="" placeholder="Search By Order No">
+        <input type="text" name="" id="" placeholder="Search By Order Date">
+      </div>
+      <div class="tableinner">
+        <table class="table table-bordered">
+          <thead class="thead-dark">
+            <tr>
+              <th scope="col">S#</th>
+              <th scope="col">Order#</th>
+              <th scope="col">Assign To</th>
+              <th scope="col">Order Status</th>
+              <th scope="col">Received Date</th>
+              <th scope="col">Customer Nick</th>
+              <th scope="col">Order Name</th>
+              <th scope="col">Process</th>
+              <th scope="col">Delete</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">1</th>
+              <td>Test</td>
+              <td>Test</td>
+              <td>Test</td>
+              <td>01/01/200</td>
+              <td>Test</td>
+              <td>Test</td>
+              <td>Test</td>
+              <td>Test</td>
+            </tr>
+            <tr>
+              <th scope="row">2</th>
+              <td>Test</td>
+              <td>Test</td>
+              <td>Test</td>
+              <td>01/01/200</td>
+              <td>Test</td>
+              <td>Test</td>
+              <td>Test</td>
+              <td>Test</td>
+            </tr>
+            <tr>
+              <th scope="row">3</th>
+              <td>Test</td>
+              <td>Test</td>
+              <td>Test</td>
+              <td>01/01/200</td>
+              <td>Test</td>
+              <td>Test</td>
+              <td>Test</td>
+              <td>Test</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+<!-- Ready Order -->
+<div id="ReadyOrder" style="display:none ;">
+  <h1 class="pageheading">Ready Order</h1>
+  <div class="OrderTables">
+    <h1>Filter Option</h1>
+    <h2>Search Record with respective input fields</h2>
+    <div class="searchcontainer">
+      <input type="text" name="" id="" placeholder="Search By Order Name">
+      <input type="text" name="" id="" placeholder="Search By Order No">
+      <input type="text" name="" id="" placeholder="Search By Order Date">
+    </div>
+    <div class="tableinner">
+      <table class="table table-bordered">
+        <thead class="thead-dark">
+          <tr>
+            <th scope="col">S#</th>
+            <th scope="col">Order#</th>
+            <th scope="col">O.Status</th>
+            <th scope="col">Received Date</th>
+            <th scope="col">Sent Date</th>
+            <th scope="col">Customer Nick</th>
+            <th scope="col">Order Name</th>
+            <th scope="col">Order Status</th>
+            <th scope="col">Assign To</th>
+            <th scope="col">Process</th>
+            <th scope="col">Delete</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">1</th>
+            <td>Test</td>
+            <td>Test</td>
+            <td>Test</td>
+            <td>01/01/200</td>
+            <td>Test</td>
+            <td>Test</td>
+            <td>Test</td>
+            <td>Test</td>
+            <td>Test</td>
+            <td>Test</td>
+          </tr>
+          <tr>
+            <th scope="row">2</th>
+            <td>Test</td>
+            <td>Test</td>
+            <td>Test</td>
+            <td>01/01/200</td>
+            <td>Test</td>
+            <td>Test</td>
+            <td>Test</td>
+            <td>Test</td>
+            <td>Test</td>
+            <td>Test</td>
+          </tr>
+          <tr>
+            <th scope="row">3</th>
+            <td>Test</td>
+            <td>Test</td>
+            <td>Test</td>
+            <td>01/01/200</td>
+            <td>Test</td>
+            <td>Test</td>
+            <td>Test</td>
+            <td>Test</td>
+            <td>Test</td>
+            <td>Test</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+<!-- All Order -->
+<div id="AllOrder" style="display: none;">
+  <h1 class="pageheading">All Order</h1>
+  <div class="OrderTables">
+    <h1>Filter Option</h1>
+    <h2>Search Record with respective input fields</h2>
+    <div class="searchcontainer">
+      <input type="text" name="" id="" placeholder="Search By Order Name">
+      <input type="text" name="" id="" placeholder="Search By Order No">
+      <input type="text" name="" id="" placeholder="Search By Order Date">
+    </div>
+    <div class="tableinner">
+      <table class="table table-bordered">
+        <thead class="thead-dark">
+          <tr>
+            <th scope="col">S#</th>
+            <th scope="col">O.Status</th>
+            <th scope="col">Order#</th>
+            <th scope="col">Received Date</th>
+            <th scope="col">Sent Date</th>
+            <th scope="col">Customer Nick</th>
+            <th scope="col">Order Name</th>
+            <th scope="col">Order Status</th>
+            <th scope="col">Assign To Sales</th>
+            <th scope="col">Process</th>
+            <th scope="col">Delete</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">1</th>
+            <td>Test</td>
+            <td>Test</td>
+            <td>Test</td>
+            <td>01/01/200</td>
+            <td>Test</td>
+            <td>Test</td>
+            <td>Test</td>
+            <td>Test</td>
+            <td>Test</td>
+            <td>Test</td>
+          </tr>
+          <tr>
+            <th scope="row">2</th>
+            <td>Test</td>
+            <td>Test</td>
+            <td>Test</td>
+            <td>01/01/200</td>
+            <td>Test</td>
+            <td>Test</td>
+            <td>Test</td>
+            <td>Test</td>
+            <td>Test</td>
+            <td>Test</td>
+          </tr>
+          <tr>
+            <th scope="row">3</th>
+            <td>Test</td>
+            <td>Test</td>
+            <td>Test</td>
+            <td>01/01/200</td>
+            <td>Test</td>
+            <td>Test</td>
+            <td>Test</td>
+            <td>Test</td>
+            <td>Test</td>
+            <td>Test</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+<!-- Order WIth 0 Price -->
+<div id="OrderWithPrice0" style="display:none ;">
+  <h1 class="pageheading">Order With Price 0$</h1>
+  <div class="OrderTables">
+    <h1>Filter Option</h1>
+    <h2>Search Record with respective input fields</h2>
+    <div class="searchcontainer">
+      <input type="text" name="" id="" placeholder="Search By Order Name">
+      <input type="text" name="" id="" placeholder="Search By Order No">
+      <input type="text" name="" id="" placeholder="Search By Order Date">
+    </div>
+    <div class="tableinner">
+      <table class="table table-bordered">
+        <thead class="thead-dark">
+          <tr>
+            <th scope="col">S#</th>
+            <th scope="col">Order#</th>
+            <th scope="col">Received Date</th>
+            <th scope="col">Sent Date</th>
+            <th scope="col">Customer Nick</th>
+            <th scope="col">Order Name</th>
+            <th scope="col">Order Status</th>
+            <th scope="col">Stiches</th>
+            <th scope="col">Price</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">1</th>
+            <td>Test</td>
+            <td>Test</td>
+            <td>Test</td>
+            <td>01/01/200</td>
+            <td>Test</td>
+            <td>Test</td>
+            <td>Test</td>
+            <td>Test</td>
+
+          </tr>
+          <tr>
+            <th scope="row">2</th>
+            <td>Test</td>
+            <td>Test</td>
+            <td>Test</td>
+            <td>01/01/200</td>
+            <td>Test</td>
+            <td>Test</td>
+            <td>Test</td>
+            <td>Test</td>
+
+          </tr>
+          <tr>
+            <th scope="row">3</th>
+            <td>Test</td>
+            <td>Test</td>
+            <td>Test</td>
+            <td>01/01/200</td>
+            <td>Test</td>
+            <td>Test</td>
+            <td>Test</td>
+            <td>Test</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+<!-- Order With Price -->
+<div id="OrderWithPrice" style="display: none;">
+  <h1 class="pageheading">Order With Price</h1>
+  <div class="OrderTables">
+    <h1>Filter Option</h1>
+    <h2>Search Record with respective input fields</h2>
+    <div class="searchcontainer">
+      <input type="text" name="" id="" placeholder="Search By Order Name">
+      <input type="text" name="" id="" placeholder="Search By Order No">
+      <input type="text" name="" id="" placeholder="Search By Order Date">
+    </div>
+    <div class="tableinner">
+      <table class="table table-bordered">
+        <thead class="thead-dark">
+          <tr>
+            <th scope="col">S#</th>
+            <th scope="col">Order#</th>
+            <th scope="col">Received Date</th>
+            <th scope="col">Sent Date</th>
+            <th scope="col">Customer Nick</th>
+            <th scope="col">Order Name</th>
+            <th scope="col">Order Status</th>
+            <th scope="col">Received Amount Date</th>
+            <th scope="col">Stiches</th>  
+            <th scope="col">Price</th>
+            <th scope="col">Process</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">1</th>
+            <td>Test</td>
+            <td>Test</td>
+            <td>Test</td>
+            <td>01/01/200</td>
+            <td>Test</td>
+            <td>Test</td>
+            <td>Test</td>
+            <td>Test</td>
+            <td>Test</td>
+            <td>Test</td>
+          </tr>
+          <tr>
+            <th scope="row">2</th>
+            <td>Test</td>
+            <td>Test</td>
+            <td>Test</td>
+            <td>01/01/200</td>
+            <td>Test</td>
+            <td>Test</td>
+            <td>Test</td>
+            <td>Test</td>
+            <td>Test</td>
+            <td>Test</td>
+
+          </tr>
+          <tr>
+            <th scope="row">3</th>
+            <td>Test</td>
+            <td>Test</td>
+            <td>Test</td>
+            <td>01/01/200</td>
+            <td>Test</td>
+            <td>Test</td>
+            <td>Test</td>
+            <td>Test</td>
+            <td>Test</td>
+            <td>Test</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+<!-- Todays Vector -->
+<div id="TodaysVector" style="display: none;">
+  <h1 class="pageheading">Todays Vector</h1>
+  <div class="OrderTables">
+    <h1>Filter Option</h1>
+    <h2>Search Record with respective input fields</h2>
+    <div class="searchcontainer">
+      <input type="text" name="" id="" placeholder="Search By Order Name">
+      <input type="text" name="" id="" placeholder="Search By Order No">
+      <input type="text" name="" id="" placeholder="Search By Order Date">
+    </div>
+    <div class="tableinner">
+      <table class="table table-bordered">
+        <thead class="thead-dark">
+          <tr>
+            <th scope="col">S#</th>
+            <th scope="col">Vector#</th>
+            <th scope="col">Order Status</th>
+            <th scope="col">Assign To</th>
+            <th scope="col">Received Date</th>
+            <th scope="col">Customer Nick</th>
+            <th scope="col">Vector Name</th>
+            <th scope="col">Process</th>
+            <th scope="col">Delete</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">1</th>
+            <td>Test</td>
+            <td>Test</td>
+            <td>Test</td>
+            <td>01/01/200</td>
+            <td>Test</td>
+            <td>Test</td>
+            <td>Test</td>
+            <td>Test</td>
+          </tr>
+          <tr>
+            <th scope="row">2</th>
+            <td>Test</td>
+            <td>Test</td>
+            <td>Test</td>
+            <td>01/01/200</td>
+            <td>Test</td>
+            <td>Test</td>
+            <td>Test</td>
+            <td>Test</td>
+          </tr>
+          <tr>
+            <th scope="row">3</th>
+            <td>Test</td>
+            <td>Test</td>
+            <td>Test</td>
+            <td>01/01/200</td>
+            <td>Test</td>
+            <td>Test</td>
+            <td>Test</td>
+            <td>Test</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+<!-- Ready Vector -->
+<div id="ReadyVector" style="display:none ;">
+  <h1 class="pageheading">Ready Vector</h1>
+  <div class="OrderTables">
+    <h1>Filter Option</h1>
+    <h2>Search Record with respective input fields</h2>
+    <div class="searchcontainer">
+      <input type="text" name="" id="" placeholder="Search By Order Name">
+      <input type="text" name="" id="" placeholder="Search By Order No">
+      <input type="text" name="" id="" placeholder="Search By Order Date">
+    </div>
+    <div class="tableinner">
+      <table class="table table-bordered">
+        <thead class="thead-dark">
+          <tr>
+            <th scope="col">S#</th>
+            <th scope="col">Vector#</th>
+            <th scope="col">Received Date</th>
+            <th scope="col">Sent Date</th>
+            <th scope="col">Customer Nick</th>
+            <th scope="col">Vector Name</th>
+            <th scope="col">Vector Status</th>
+            <th scope="col">Assign To</th>
+            <th scope="col">Assign To</th>
+            <th scope="col">Process</th>
+            <th scope="col">Delete</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">1</th>
+            <td>Test</td>
+            <td>Test</td>
+            <td>Test</td>
+            <td>01/01/200</td>
+            <td>Test</td>
+            <td>Test</td>
+            <td>Test</td>
+            <td>Test</td>
+            <td>Test</td>
+            <td>Test</td>
+          </tr>
+          <tr>
+            <th scope="row">2</th>
+            <td>Test</td>
+            <td>Test</td>
+            <td>Test</td>
+            <td>01/01/200</td>
+            <td>Test</td>
+            <td>Test</td>
+            <td>Test</td>
+            <td>Test</td>
+            <td>Test</td>
+            <td>Test</td>
+          </tr>
+          <tr>
+            <th scope="row">3</th>
+            <td>Test</td>
+            <td>Test</td>
+            <td>Test</td>
+            <td>01/01/200</td>
+            <td>Test</td>
+            <td>Test</td>
+            <td>Test</td>
+            <td>Test</td>
+            <td>Test</td>
+            <td>Test</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+<!-- All Vectors -->
+<div id="AllVectors" style="display: none;">
+  <h1 class="pageheading">All Vectors</h1>
+  <div class="OrderTables">
+    <h1>Filter Option</h1>
+    <h2>Search Record with respective input fields</h2>
+    <div class="searchcontainer">
+      <input type="text" name="" id="" placeholder="Search By Order Name">
+      <input type="text" name="" id="" placeholder="Search By Order No">
+      <input type="text" name="" id="" placeholder="Search By Order Date">
+    </div>
+    <div class="tableinner">
+      <table class="table table-bordered">
+        <thead class="thead-dark">
+          <tr>
+            <th scope="col">S#</th>
+            <th scope="col">V.Status</th>
+            <th scope="col">Vector#</th>
+            <th scope="col">Received Date</th>
+            <th scope="col">Sent Date</th>
+            <th scope="col">Customer Nick</th>
+            <th scope="col">Vector Name</th>
+            <th scope="col">Vector Status</th>
+            <th scope="col">Assign To</th>
+            <th scope="col">Assign To Sales</th>
+            <th scope="col">Process</th>
+            <th scope="col">Delete</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">1</th>
+            <td>Test</td>
+            <td>Test</td>
+            <td>Test</td>
+            <td>01/01/200</td>
+            <td>Test</td>
+            <td>Test</td>
+            <td>Test</td>
+            <td>Test</td>
+            <td>Test</td>
+            <td>Test</td>
+            <td>Test</td>
+          </tr>
+          <tr>
+            <th scope="row">2</th>
+            <td>Test</td>
+            <td>Test</td>
+            <td>Test</td>
+            <td>01/01/200</td>
+            <td>Test</td>
+            <td>Test</td>
+            <td>Test</td>
+            <td>Test</td>
+            <td>Test</td>
+            <td>Test</td>
+            <td>Test</td>
+          </tr>
+          <tr>
+            <th scope="row">3</th>
+            <td>Test</td>
+            <td>Test</td>
+            <td>Test</td>
+            <td>01/01/200</td>
+            <td>Test</td>
+            <td>Test</td>
+            <td>Test</td>
+            <td>Test</td>
+            <td>Test</td>
+            <td>Test</td>
+            <td>Test</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+<!-- Vector with price 0 -->
+<div id="VectorWithPrice0" style="display:none ;">
+  <h1 class="pageheading">Vector With Price 0$</h1>
+  <div class="OrderTables">
+    <h1>Filter Option</h1>
+    <h2>Search Record with respective input fields</h2>
+    <div class="searchcontainer">
+      <input type="text" name="" id="" placeholder="Search By Order Name">
+      <input type="text" name="" id="" placeholder="Search By Order No">
+      <input type="text" name="" id="" placeholder="Search By Order Date">
+    </div>
+    <div class="tableinner">
+      <table class="table table-bordered">
+        <thead class="thead-dark">
+          <tr>
+            <th scope="col">S#</th>
+            <th scope="col">Vector#</th>
+            <th scope="col">Received Date</th>
+            <th scope="col">Sent Date</th>
+            <th scope="col">Customer Nick</th>
+            <th scope="col">Vector Name</th>
+            <th scope="col">Vector Status</th>
+            <th scope="col">Stiches</th>
+            <th scope="col">Price</th>
+            <th scope="col">Process</th>
+
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">1</th>
+            <td>Test</td>
+            <td>Test</td>
+            <td>Test</td>
+            <td>01/01/200</td>
+            <td>Test</td>
+            <td>Test</td>
+            <td>Test</td>
+            <td>Test</td>
+            <td>Test</td>
+
+          </tr>
+          <tr>
+            <th scope="row">2</th>
+            <td>Test</td>
+            <td>Test</td>
+            <td>Test</td>
+            <td>01/01/200</td>
+            <td>Test</td>
+            <td>Test</td>
+            <td>Test</td>
+            <td>Test</td>
+            <td>Test</td>
+
+          </tr>
+          <tr>
+            <th scope="row">3</th>
+            <td>Test</td>
+            <td>Test</td>
+            <td>Test</td>
+            <td>01/01/200</td>
+            <td>Test</td>
+            <td>Test</td>
+            <td>Test</td>
+            <td>Test</td>
+            <td>Test</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+<!-- Vector with price -->
+<div id="VectorWithPrice" style="display: none;">
+  <h1 class="pageheading">Vector With Price</h1>
+  <div class="OrderTables">
+    <h1>Filter Option</h1>
+    <h2>Search Record with respective input fields</h2>
+    <div class="searchcontainer">
+      <input type="text" name="" id="" placeholder="Search By Order Name">
+      <input type="text" name="" id="" placeholder="Search By Order No">
+      <input type="text" name="" id="" placeholder="Search By Order Date">
+    </div>
+    <div class="tableinner">
+      <table class="table table-bordered">
+        <thead class="thead-dark">
+          <tr>
+            <th scope="col">S#</th>
+            <th scope="col">Vector#</th>
+            <th scope="col">Received Date</th>
+            <th scope="col">Sent Date</th>
+            <th scope="col">Customer Nick</th>
+            <th scope="col">Vector Name</th>
+            <th scope="col">Vector Status</th>
+            <th scope="col">Received Amount Date</th>
+            <th scope="col">Price</th>
+            <th scope="col">Process</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">1</th>
+            <td>Test</td>
+            <td>Test</td>
+            <td>Test</td>
+            <td>01/01/200</td>
+            <td>Test</td>
+            <td>Test</td>
+            <td>Test</td>
+            <td>Test</td>
+            <td>Test</td>
+
+          </tr>
+          <tr>
+            <th scope="row">2</th>
+            <td>Test</td>
+            <td>Test</td>
+            <td>Test</td>
+            <td>01/01/200</td>
+            <td>Test</td>
+            <td>Test</td>
+            <td>Test</td>
+            <td>Test</td>
+            <td>Test</td>
+
+
+          </tr>
+          <tr>
+            <th scope="row">3</th>
+            <td>Test</td>
+            <td>Test</td>
+            <td>Test</td>
+            <td>01/01/200</td>
+            <td>Test</td>
+            <td>Test</td>
+            <td>Test</td>
+            <td>Test</td>
+            <td>Test</td>
+
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+<!-- Customers -->
+<div id="Customers" style="display:none ;">
+  <h1 class="pageheading">Customers</h1>
+  <div class="OrderTables">
+    <h1>Filter Option</h1>
+    <h2>Search Record with respective input fields</h2>
+    <div class="searchcontainer">
+      <input type="text" name="" id="" placeholder="Company Name">
+      <input type="text" name="" id="" placeholder="Contact Person">
+      <input type="text" name="" id="" placeholder="Email">
+      <input type="date" name="" id="" >
+    </div>
+    <div class="tableinner">
+      <table class="table table-bordered">
+        <thead class="thead-dark">
+          <tr>
+            <th scope="col">S#</th>
+            <th scope="col">Status</th>
+            <th scope="col">Customer Nick</th>
+            <th scope="col">Inv History</th>
+            <th scope="col">Gen History</th>
+            <th scope="col">Contact Person</th>
+            <th scope="col">Company</th>
+            <th scope="col">Phone</th>
+            <th scope="col">Email</th>
+            <th scope="col">Check</th>
+            <th scope="col">Ref</th>
+            <th scope="col">Color Status</th>
+            <th scope="col">Records</th>
+            <th scope="col">Comments</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">1</th>
+            <td>Test</td>
+            <td>Test</td>
+            <td>Test</td>
+            <td>Test</td>
+            <td>Test</td>
+            <td>Test</td>
+            <td>Test</td>
+            <td>Test</td>
+            <td>Test</td>
+            <td>Test</td>
+            <td>Test</td>
+            <td>Test</td>
+            <td>Test</td>
+
+          </tr>
+          <tr>
+            <th scope="row">2</th>
+            <td>Test</td>
+            <td>Test</td>
+            <td>Test</td>
+            <td>Test</td>
+            <td>Test</td>
+            <td>Test</td>
+            <td>Test</td>
+            <td>Test</td>
+            <td>Test</td>
+            <td>Test</td>
+            <td>Test</td>
+            <td>Test</td>
+            <td>Test</td>
+
+
+          </tr>
+          <tr>
+            <th scope="row">3</th>
+            <td>Test</td>
+            <td>Test</td>
+            <td>Test</td>
+            <td>Test</td>
+            <td>Test</td>
+            <td>Test</td>
+            <td>Test</td>
+            <td>Test</td>
+            <td>Test</td>
+            <td>Test</td>
+            <td>Test</td>
+            <td>Test</td>
+            <td>Test</td>
+
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+<!-- All Customers -->
+<div id="AllCustomers" style="display: none;">
+  <h1 class="pageheading">All Customers</h1>
+  <div class="OrderTables">
+    <h1>Filter Option</h1>
+    <h2>Search Record with respective input fields</h2>
+    <div class="searchcontainer">
+      <input type="text" name="" id="" placeholder="Company Name">
+      <input type="text" name="" id="" placeholder="Contact Person">
+      <input type="text" name="" id="" placeholder="Email">
+      <input type="date" name="" id="" >
+    </div>
+    <div class="tableinner">
+      <table class="table table-bordered">
+        <thead class="thead-dark">
+          <tr>
+            <th scope="col">S#</th>
+            <th scope="col">Reg Date</th>
+            <th scope="col">Customer Nick</th>
+            <th scope="col">Contact Person</th>
+            <th scope="col">Company</th>
+            <th scope="col">Phone</th>
+            <th scope="col">Email</th>
+            <th scope="col">Sales Man's</th>
+            <th scope="col">Records</th>
+            <th scope="col">Delete</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">1</th>
+            <td>Test</td>
+            <td>Test</td>
+            <td>Test</td>
+            <td>Test</td>
+            <td>Test</td>
+            <td>Test</td>
+            <td>Test</td>
+            <td>Test</td>
+            <td>Test</td>
+          </tr>
+          <tr>
+            <th scope="row">2</th>
+            <td>Test</td>
+            <td>Test</td>
+            <td>Test</td>
+            <td>Test</td>
+            <td>Test</td>
+            <td>Test</td>
+            <td>Test</td>
+            <td>Test</td>
+            <td>Test</td>
+
+          </tr>
+          <tr>
+            <th scope="row">3</th>
+            <td>Test</td>
+            <td>Test</td>
+            <td>Test</td>
+            <td>Test</td>
+            <td>Test</td>
+            <td>Test</td>
+            <td>Test</td>
+            <td>Test</td>
+            <td>Test</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+<!--Designer -->
+<div id="Designer" style="display: none;">
+  <h1 class="pageheading">Designer</h1>
+  <div class="OrderTables">
+    <h1>Designer Progress Report</h1>
+    <h2>Generate Sales Man Progress Report</h2>
+    <div class="searchcontainer">
+      <select type="text" name="Select Designer" id="">
+        <option value="">Select Designer</option>
+        <option value="Designer1">Designer1</option>
+        <option value="Designer2">Designer2</option>
+      </select>
+      <input type="date" name="" id="" >
+      <input class="submittable" type="submit" name="" id="" >
+    </div>
+    <div class="tableinner">
+      <table class="table table-bordered">
+        <thead class="thead-dark">
+          <tr>
+            <th scope="col">S#</th>
+            <th scope="col">Order No</th>
+            <th scope="col">Order Date</th>
+            <th scope="col">Price Status</th>
+            <th scope="col">Username</th>
+            <th scope="col">Order Ammount</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">1</th>
+            <td>Test</td>
+            <td>Test</td>
+            <td>Test</td>
+            <td>Test</td>
+            <td>Test</td>
+          </tr>
+          <tr>
+            <th scope="row">2</th>
+            <td>Test</td>
+            <td>Test</td>
+            <td>Test</td>
+            <td>Test</td>
+            <td>Test</td>
+          </tr>
+          <tr>
+            <th scope="row">3</th>
+            <td>Test</td>
+            <td>Test</td>
+            <td>Test</td>
+            <td>Test</td>
+            <td>Test</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+<!--Order Report -->
+<div id="SalesmanReport" style="display:none ;">
+  <h1 class="pageheading">Sales Man Report</h1>
+  <div class="OrderTables">
+    <h1>Sales Man Report</h1>
+    <h2>Generate Sales Man Progress Report</h2>
+    <div class="searchcontainer">
+      <select type="text" name="Select Designer" id="">
+        <option value="">Order</option>
+        <option value="Designer1">Vector</option>
+      </select>
+      <select type="text" name="Select Designer" id="">
+        <option value="">Paid</option>
+        <option value="Designer1">Payable</option>
+      </select>
+      <input type="date" name="" id="" >
+      <input class="submittable" type="submit" name="" id="" >
+    </div>
+    <div class="tableinner">
+      <table class="table table-bordered">
+        <thead class="thead-dark">
+          <tr>
+            <th scope="col">S#</th>
+            <th scope="col">Order No</th>
+            <th scope="col">Order Date</th>
+            <th scope="col">Price Status</th>
+            <th scope="col">Username</th>
+            <th scope="col">Order Ammount</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">1</th>
+            <td>Test</td>
+            <td>Test</td>
+            <td>Test</td>
+            <td>Test</td>
+            <td>Test</td>
+          </tr>
+          <tr>
+            <th scope="row">2</th>
+            <td>Test</td>
+            <td>Test</td>
+            <td>Test</td>
+            <td>Test</td>
+            <td>Test</td>
+          </tr>
+          <tr>
+            <th scope="row">3</th>
+            <td>Test</td>
+            <td>Test</td>
+            <td>Test</td>
+            <td>Test</td>
+            <td>Test</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+<!--Order Report -->
+<div id="OrderReport" style="display:none ;">
+  <h1 class="pageheading">Order Report</h1>
+  <div class="OrderTables">
+    <h1>Order Progress Report</h1>
+    <h2>Generate Sales Man Progress Report</h2>
+    <div class="searchcontainer">
+      <select type="text" name="Select Designer" id="">
+        <option value="">Order</option>
+        <option value="Designer1">Vector</option>
+      </select>
+      <select type="text" name="Select Designer" id="">
+        <option value="">Paid</option>
+        <option value="Designer1">Payable</option>
+      </select>
+      <input type="date" name="" id="" >
+      <input class="submittable" type="submit" name="" id="" >
+    </div>
+    <div class="tableinner">
+      <table class="table table-bordered">
+        <thead class="thead-dark">
+          <tr>
+            <th scope="col">S#</th>
+            <th scope="col">Order No</th>
+            <th scope="col">Order Date</th>
+            <th scope="col">Price Status</th>
+            <th scope="col">Username</th>
+            <th scope="col">Order Ammount</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">1</th>
+            <td>Test</td>
+            <td>Test</td>
+            <td>Test</td>
+            <td>Test</td>
+            <td>Test</td>
+          </tr>
+          <tr>
+            <th scope="row">2</th>
+            <td>Test</td>
+            <td>Test</td>
+            <td>Test</td>
+            <td>Test</td>
+            <td>Test</td>
+          </tr>
+          <tr>
+            <th scope="row">3</th>
+            <td>Test</td>
+            <td>Test</td>
+            <td>Test</td>
+            <td>Test</td>
+            <td>Test</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+<!--Customer Report -->
+<div id="CustomerReport" style="display:none ;">
+  <h1 class="pageheading">Customer Report</h1>
+  <div class="OrderTables">
+    <h1>Customer Progress Report</h1>
+    <h2>Generate Sales Man Progress Report</h2>
+    <div class="searchcontainer">
+      <select type="text" name="Select Designer" id="">
+        <option value="">Select Customer</option>
+        <option value="Customer1">Customer1</option>
+        <option value="Customer2">Customer2</option>
+      </select>
+      <select type="text" name="Select Designer" id="">
+        <option value="">Paid</option>
+        <option value="Designer1">Payable</option>
+      </select>
+      <input type="date" name="" id="" >
+      <input class="submittable" type="submit" name="" id="" >
+    </div>
+    <div class="tableinner">
+      <table class="table table-bordered">
+        <thead class="thead-dark">
+          <tr>
+            <th scope="col">S#</th>
+            <th scope="col">Order No</th>
+            <th scope="col">Order Date</th>
+            <th scope="col">Price Status</th>
+            <th scope="col">Username</th>
+            <th scope="col">Order Ammount</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">1</th>
+            <td>Test</td>
+            <td>Test</td>
+            <td>Test</td>
+            <td>Test</td>
+            <td>Test</td>
+          </tr>
+          <tr>
+            <th scope="row">2</th>
+            <td>Test</td>
+            <td>Test</td>
+            <td>Test</td>
+            <td>Test</td>
+            <td>Test</td>
+          </tr>
+          <tr>
+            <th scope="row">3</th>
+            <td>Test</td>
+            <td>Test</td>
+            <td>Test</td>
+            <td>Test</td>
+            <td>Test</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+<!--Company Report -->
+<div id="CompanyReport" style="display:none ;">
+  <h1 class="pageheading">Company Report</h1>
+  <div class="OrderTables">
+    <h1>Company Progress Report</h1>
+    <h2>Generate Sales Man Progress Report</h2>
+    <div class="searchcontainer">
+      <input type="date" name="" id="" >
+      <input class="submittable" type="submit" name="" id="" >
+    </div>
+    <div class="tableinner">
+      <table class="table table-bordered">
+        <thead class="thead-dark">
+          <tr>
+            <th scope="col">S#</th>
+            <th scope="col">Order No</th>
+            <th scope="col">Order Date</th>
+            <th scope="col">Price Status</th>
+            <th scope="col">Username</th>
+            <th scope="col">Order Ammount</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">1</th>
+            <td>Test</td>
+            <td>Test</td>
+            <td>Test</td>
+            <td>Test</td>
+            <td>Test</td>
+          </tr>
+          <tr>
+            <th scope="row">2</th>
+            <td>Test</td>
+            <td>Test</td>
+            <td>Test</td>
+            <td>Test</td>
+            <td>Test</td>
+          </tr>
+          <tr>
+            <th scope="row">3</th>
+            <td>Test</td>
+            <td>Test</td>
+            <td>Test</td>
+            <td>Test</td>
+            <td>Test</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+<!--Calling History -->
+<div id="CallHistory" style="display: none;">
+  <h1 class="pageheading">Call History</h1>
+  <div class="OrderTables">
+    <h1>Support Ticket</h1>
+    <div class="searchcontainer row">
+      <div class="supportbox1 col" style="background-color:rgb(79, 212, 79) ;">
+        <h1>0,000</h1>
+        <h2>Total Calls</h2>
+      </div>
+      <div class="supportbox2 col" style="background-color:rgb(223, 130, 226) ;">
+        <h1>0,000</h1>
+        <h2>Total Connected</h2>
+      </div>
+      <div class="supportbox3 col" style="background-color:rgb(93, 112, 219) ;">
+        <h1>0,000</h1>
+        <h2>Answering Machine</h2>
+      </div>
+      <div class="supportbox4 col" style="background-color:rgb(97, 100, 97) ;">
+        <h1>0,000</h1>
+        <h2>IVR</h2>
+      </div>
+    </div>
+    <div class="tableinner">
+      <table class="table table-bordered">
+        <thead class="thead-dark">
+          <tr>
+            <th scope="col">S#</th>
+            <th scope="col">Phone Number</th>
+            <th scope="col">Country</th>
+            <th scope="col">DateTime</th>
+            <th scope="col">Call Start</th>
+            <th scope="col">Call End</th>
+            <th scope="col">Duration</th>
+            <th scope="col">Price</th>
+            <th scope="col">Agent</th>
+            <th scope="col">Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">1</th>
+            <td>Test</td>
+            <td>Test</td>
+            <td>Test</td>
+            <td>Test</td>
+            <td>Test</td>
+            <td>Test</td>
+            <td>Test</td>
+            <td>Test</td>
+            <td>Test</td>
+          </tr>
+          <tr>
+            <th scope="row">2</th>
+            <td>Test</td>
+            <td>Test</td>
+            <td>Test</td>
+            <td>Test</td>
+            <td>Test</td>
+            <td>Test</td>
+            <td>Test</td>
+            <td>Test</td>
+            <td>Test</td>
+          </tr>
+          <tr>
+            <th scope="row">3</th>
+            <td>Test</td>
+            <td>Test</td>
+            <td>Test</td>
+            <td>Test</td>
+            <td>Test</td>
+            <td>Test</td>
+            <td>Test</td>
+            <td>Test</td>
+            <td>Test</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+<!--Employee -->
+<div id="Employee" style="display:none ;">
+  <h1 class="pageheading">All Employee</h1>
+  <div class="OrderTables">
+    <h1>Manage Employee</h1>
+    <h2>You can manage curde system with this table</h2>
+    <div class="tableinner">
+      <table class="table table-bordered">
+        <thead class="thead-dark">
+          <tr>
+            <th scope="col">Actions</th>
+            <th scope="col">Full Name</th>
+            <th scope="col">User Name</th>
+            <th scope="col">Password</th>
+            <th scope="col">Desg</th>
+            <th scope="col">Calling</th>
+            <th scope="col">Mail Box</th>
+            <th scope="col">Reg Date</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="addemployee">
+            <td>Add New</td>
+            <td><input type="text" placeholder="Full Name"></td>
+            <td><input type="text" placeholder="User Name"></td>
+            <td><input type="text" placeholder="Password"></td>
+            <td><input type="text" placeholder="Desg"></td>
+            <td><input type="text" placeholder="Calling"></td>
+            <td><input type="text" placeholder="Mail Box"></td>
+            <td><input type="text" placeholder="Reg Date"></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td>Test</td>
+            <td>Test</td>
+            <td>Test</td>
+            <td>Test</td>
+            <td>Test</td>
+            <td>Test</td>
+            <td>Test</td>
+          </tr>
+          <tr>
+            <th></th>
+            <td>Test</td>
+            <td>Test</td>
+            <td>Test</td>
+            <td>Test</td>
+            <td>Test</td>
+            <td>Test</td>
+            <td>Test</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+  </div>
+</body>
+
+</html>

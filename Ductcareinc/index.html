@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!------------------------------------
+    Design & Developed by: Hassan Mujtaba
+    Date: 10/06/2022 
+    -------------------------------------->
+    <meta property="og:image" content="https://i.ibb.co/7bzvt1d/meta.png" data-addsearch="no_crop">
+    <meta name="description" content="Ducts Care is a professional duct cleaning company currently operational in Texas, Georgia, Utah,
+        Missouri, Arizona, Washington, Colorado and Florida. We specialize in providing hassle-free home and
+        business air duct and dryer vent inspection, maintenance, cleaning, and restoration. Our technicians are not only adept at providing quality services but we take it as our responsibility
+        to greatly improve and maintain your home's indoor air quality. We employ a variety of equipment that
+        is unique and specifically developed for each service, ensuring that the job is done right the first
+        time.">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Oswald" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto" rel="stylesheet">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <!-- Css -->
+    <link rel="stylesheet" href="CSS/Navbar.css">
+    <link rel="stylesheet" href="CSS/Home.css">
+    <link rel="stylesheet" href="CSS/Footer.css">
+    <!-- JavaScript -->
+    <script src="JavaScript/Script.js"></script>
+    <title>Ducts Care Inc.</title>
+    <link rel="shortcut icon" type="image/jpg" href="Assets/Logo & icon/Icon.png"/>
+</head>
+
+<body onload="myFunction()">
+    <div id="loader"></div>
+    <div style="display:none;" id="myDiv" class="animate-bottom">
+        <!-- Top-Bar -->
+        <div class="Top-Bar">
+            <div class="row Top-Bar-Info ">
+                <p class="T-HL col-lg-2 col-md-12"><i class="fa-solid fa-clock"></i>SERVICE AVAILABLE 24/7</p>
+                <p class="T-HM col-lg-7 col-md-12"><i class="fa-solid fa-location-arrow"></i>SERVING CITIES IN TEXAS,
+                    GEORGIA, UTAH, ARIZONA, MISSOURI, FLORIDA, COLORADO AND MARYLAND/VIRGINIA</p>
+                <p class="T-HR col-lg-3 col-md-12"><i class="fa-solid fa-tags"></i>10% OFF WITH ANNUAL MAINTENANCE PLAN
+                </p>
+            </div>
+        </div>
+
+        <!-- Banner-Bar -->
+        <div class="Banner-Bar">
+            <a><img src="Assets/Logo & icon/Logo.png" alt="" srcset=""></a>
+            <div class="Banner-Bar-Buttons">
+                <button class="Banner-Button-P"><i class="fa-solid fa-phone"></i>(469)-320-0321</button>
+                <button class="Banner-Button-S"><i class="fa-solid fa-calendar-check"></i>SCHEDULE SERVICE</button>
+            </div>
+        </div>
+
+        <!-- Nav-Bar -->
+        <div class="Nav-Bar" id="Nav-Bar">
+            <nav class="navbar navbar-expand-lg">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon">
+                        <div class="nav-lines">
+                            <div class="lines"></div>
+                            <div class="lines"></div>
+                            <div class="lines"></div>
+                        </div>
+                    </span>
+                </button>
+                <div class="Banner-Bar-Buttons-Mobile">
+                    <button class="Banner-Button-P" onclick="OpenPhonepop()"><i class="fa-solid fa-phone"></i></button>
+                    <button class="Banner-Button-S"><i class="fa-solid fa-calendar-check"></i></button>
+                </div>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <div class="Navbar-line"></div>
+                        <li class="nav-item">
+                            <a class="nav-link " id="activepage" href="#">
+                                <div class="activehome"></div>HOME
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="Pages/About.html">ABOUT</a>
+                        </li>
+                        <li class="nav-item">
+                            <div class="dropdown">
+                                <a>OUR SERVICES</a>
+                                <div class="dropdown-content">
+                                    <a href="Pages/Services Pages/DryVent.html">Dryer Vent Cleaning Services</a>
+                                    <a href="Pages/Services Pages/Humidifiers.html">Humidifiers Services</a>
+                                    <a href="Pages/Services Pages/Vent.html">Vent Care Services</a>
+                                    <a href="Pages/Services Pages/Brushing.html">Brushing Services</a>
+                                    <a href="Pages/Services Pages/Furnace.html">Furnace Cleaning Service</a>
+                                    <a href="Pages/Services Pages/AC.html">AC Coil Cleaning Service</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="Pages/Prepare.html">HOW TO PREPARE</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="Pages/Pacakages.html">OUR PACKAGES & FAQ</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="Pages/Contact.html">CONTACT US</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+
+        <!-- Nav-Bar-Popup -->
+        <div class="phonepopup nodisplay" id="phonepopup">
+            <div class="phoneDetailsPopup">
+                <h1>(469)-320-0321</h1>
+                <button onclick="ClosePhonepop()"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+        </div>
+        <div class="schedulepopup">
+            <div class="scheduleDetailsPopup">
+            </div>
+        </div>
+
+        <!-- Page-Banner -->
+        <div class="Banner">
+            <video preload="none" width="100%" height="auto" loop="true" autoplay="autoplay" muted style="margin: 0; padding:0;" >
+                <source src="Assets/Backgrounds/BannerVideo.mp4" type=video/mp4 id="bannervideo">
+            </video>
+            <!-- <div class="Bannerdetails">
+            <h1>Duct Cleaning Services</h1>
+            <p>"Reach out to us to get a free quote on your duct cleaning needs"</p>
+            <button class="Banner-Button" onclick="OpenPhonepopforcall()">Call Us for Free Quote</button>
+        </div> -->
+        </div>
+
+        <!-- Expert Duct Cleaning in USA Area Div -->
+        <div class="container mt-5">
+            <div class="row">
+                <div class="col-lg-6 col-sm-12 FirstDiv">
+                    <h1>Duct Cleaning Services with DuctsCare</h1>
+                    <p>
+                        DuctsCare specializes in providing complete duct cleaning solutions for ducts and exhausts. We
+                        provide
+                        advanced cleaning services for all types of ducts and exhausts regardless of their size, form
+                        and
+                        dimension.
+                        Our
+                        expertise lies in HVAC inspection, maintenance, cleaning and restoration of residential as well
+                        as
+                        commercial
+                        air
+                        ducts and dryer vents. Indoor air can be up to 70 times more polluted than outdoor air. At
+                        DuctsCare,
+                        our
+                        top priority is to improve and maintain the quality of indoor air so that you breathe fresh and
+                        odourless air
+                        all
+                        throughout the day. We make use of high quality and well-maintained equipment that ensures our
+                        perfectly
+                        delivered
+                        services leave you satisfied.</p>
+                </div>
+                <div class="col-lg-6 col-sm-12 firstdiv"></div>
+            </div>
+        </div>
+
+        <!-- Benefits Div -->
+        <div class="mt-5 Benefits">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 col-sm-12 Benefits-Left">
+                        <h1>Top 6 Benefits of Air Duct Cleaning</h1>
+                        <p>Air duct cleaning comes with the following benefits:</p>
+                        <i class="fa-solid fa-check-double mt-2 mr-2"></i>
+                        <h2>Cleaner living environment</h2>
+                        <i class="fa-solid fa-check-double mt-2 mr-2"></i>
+                        <h2>Reduces allergens and irritants</h2>
+                        <i class="fa-solid fa-check-double mt-2 mr-2"></i>
+                        <h2>Helps everyone breathe easier</h2>
+                        <i class="fa-solid fa-check-double mt-2 mr-2"></i>
+                        <h2>Sanitizes the air</h2>
+                        <i class="fa-solid fa-check-double mt-2 mr-2"></i>
+                        <h2>Removes unpleasant smells and odours from the air</h2>
+                        <i class="fa-solid fa-check-double mt-2 mr-2"></i>
+                        <h2>Improves heat and air efficiency and return on your investment</h2>
+                    </div>
+                    <div class="col-lg-6 col-sm-12 Benefits-Right">
+                        <h1>5 Signs You Should Have Your Ducts Cleaned</h1>
+                        <p>If you see these signs, it’s probably the right time to call us.</p>
+                        <i class="fa-solid fa-check-double mt-2 mr-2"></i>
+                        <h2>You haven’t changed the air filter on time</h2>
+                        <i class="fa-solid fa-check-double mt-2 mr-2"></i>
+                        <h2>The registers and vent covers have visible dust</h2>
+                        <i class="fa-solid fa-check-double mt-2 mr-2"></i>
+                        <h2>You see mould in or around your HVAC system</h2>
+                        <i class="fa-solid fa-check-double mt-2 mr-2"></i>
+                        <h2>Airflow isn’t consistent from room to room</h2>
+                        <i class="fa-solid fa-check-double mt-2 mr-2"></i>
+                        <h2>You can hear noises in the duct work</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Why Us Div -->
+        <div class="mt-5 mb-5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 col-sm-12 Whyus">
+                        <h1>Why Choose Us?</h1>
+                        <p>Here are some of the reasons why you should choose our services:</p>
+                        <i class="fa-solid fa-check-double mt-2 mr-2"></i>
+                        <h2>We’re open 6 days a week</h2>
+                        <i class="fa-solid fa-check-double mt-2 mr-2"></i>
+                        <h2>Our services help you save on energy bills</h2>
+                        <i class="fa-solid fa-check-double mt-2 mr-2"></i>
+                        <h2>We ensure 100% customer satisfaction</h2>
+                        <i class="fa-solid fa-check-double mt-2 mr-2"></i>
+                        <h2>We charge a flat rate for our services with no hidden fees</h2>
+                        <i class="fa-solid fa-check-double mt-2 mr-2"></i>
+                        <h2>We don’t use telemarketing</h2>
+                        <i class="fa-solid fa-check-double mt-2 mr-2"></i>
+                        <h2>We provide services in areas up to 5,000 sq. ft</h2>
+                    </div>
+                    <div class="col-lg-6 col-sm-12 whyusimage">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Promotions and Offer Div -->
+        <div class="mt-5 mb-5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-sm-12 Banner2">
+                        <img src="Assets/Material/sav100.png" alt="">
+                    </div>
+                    <div class="col-lg-4 col-sm-12 Banner2-Details">
+                        <h1>Promotions and Special Offers</h1>
+                        <p>AT DuctsCare, we are offering the Whole House Package at a low price of $249.99. The package
+                            includes:</p>
+                        <i class="fa-solid fa-check-double mr-2"></i>
+                        <h2>Free inspection</h2>
+                        <i class="fa-solid fa-check-double mr-2"></i>
+                        <h2 class="mt-4">Deodorizer in the vents</h2>
+                        <i class="fa-solid fa-check-double mr-2"></i>
+                        <h2 class="mt-4">Free dryer vent cleaning which individually costs $69.99</h2>
+                        <div class="save">
+                            <h1>If you opt for this package, you can save over $100.</h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Client Reviews Div -->
+        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+            </ol>
+            <h1>Our Client’s Reviews</h1>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class=" container w-50" alt="First slide">
+                        <div class="Reviews">
+                            <div class="ReviewSection">
+                                <h2>Quick and Efficient</h2>
+                                <p>“Really great service, very thorough cleaning of our ducts which, after a recent
+                                    renovation, were in desperate need of cleaning!
+                                    The crew arrived on time, the before/after pictures were really good
+                                    to see and the whole process was quick and efficient.”</p>
+                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                    class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                    class="fa-solid fa-star"></i>
+                                <h3>-James-</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="container w-50" alt="Second slide">
+                        <div class="Reviews">
+                            <div class="ReviewSection">
+                                <h2>Great Service</h2>
+                                <p>“Great service! The service tech was polite and efficient and I haven’t had to dust
+                                    my
+                                    house since they were here 2 weeks ago. Highly recommend them.”</p>
+                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                    class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                    class="fa-solid fa-star"></i>
+                                <h3>-Lucas-</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="container w-50" alt="Third slide">
+                        <div class="Reviews">
+                            <div class="ReviewSection">
+                                <h2>Professional and Prompt</h2>
+                                <p>“I feel fortunate to have done my research and come across DuctsCare. They are
+                                    professional and prompt in the delivery of their services. From a customer service
+                                    perspective,
+                                    I found them very patient and going the extra mile so to speak.”</p>
+                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                    class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                    class="fa-solid fa-star"></i>
+                                <h3>-Olivia-</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+        </div>
+
+        <!-- Benefits Div -->
+        <div class="mt-5 Benefits">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 col-sm-12 service-left">
+                        <h1>Dryer Vent Cleaning Service at DuctsCare</h1>
+                        <p>We offer a wide range of duct cleaning and maintenance services.</p>
+                        <a href="Pages/Services Pages/DryVent.html">Know More</a>
+                    </div>
+                    <div class="col-lg-6 col-sm-12 service-right">
+                        <h1>Air Conditioner Coil Cleaning at DuctsCare</h1>
+                        <p>We offer expert air conditioner coil cleaning services.</p>
+                        <a href="Pages/Services Pages/AC.html">Know More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Service Locations Div -->
+        <div class="container mt-5">
+            <div class="row Service-Locations">
+                <div class="col-lg-4">
+                    <div class="SL-Details" style="background-color: #62E1E8; border: none;">
+                        <h1>Service Locations</h1>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="SL-Details">
+                        <h1>TEXAS</h1>
+                        <p>Dallas, Fort Worth, Houston, San Antonio, Austin, Waco, Killeen, Tyler, Abilene, Midland,
+                            Odessa,
+                            Lubbock,
+                            Texarkana and surroundings.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="SL-Details">
+                        <h1>GEORGIA</h1>
+                        <p>Atlanta, Marietta, Newnan, Lawrenceville, Norcross, Kennesaw, Acworth, Alpharetta, Cumming,
+                            Gainesville,
+                            Douglasville, Athens and surroundings. </p>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="SL-Details">
+                        <h1>UTAH</h1>
+                        <p>Salt Lake City, West Valley City, West/South Jordan, Lehi, Orem, Provo, Spanish Fork, Payson,
+                            Centerville,
+                            Farmington, Layton, Ogden, Logan, Tremonton and surroundings.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="SL-Details">
+                        <h1>ARIZONA</h1>
+                        <p>Phoenix, Mesa, Glendale, Chandler, Scottsdale, Gilbert, Tempe, Surprise, Tucson and
+                            surroundings.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="SL-Details">
+                        <h1>MISSOURI</h1>
+                        <p>St. Louis, Clayton, Kirkwood, Fenton, Florissant, Ferguson, Bridgeton, St Charles, Ballwin,
+                            Arnold, St
+                            Peters, O’Fallon, Wentzville, Chesterfield and surroundings.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="SL-Details">
+                        <h1>FLORIDA</h1>
+                        <p>Miami, Boca Raton, West Palm Beach, Orlando, Lakeland, Tampa, Clearwater, St. Petersburg,
+                            Sarasota,
+                            Jacksonville, Neptune Beach and surroundings.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="SL-Details">
+                        <h1>COLORADO</h1>
+                        <p>Denver, Aurora, Lakewood, Westminster, Boulder, Brighton, Littleton, Arvada, Castle Rock,
+                            Colorado Springs
+                            and surroundings.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="SL-Details">
+                        <h1>MARYLAND/VIRGINIA</h1>
+                        <p>Baltimore, Frederick, Germantown, Gaithersburg, Rockville, Bowie, Washington, Richmond,
+                            Arlington, Alexandria, Ashburn, Manassas and surroundings. </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer mt-5" id="footer" style="display: none;">
+        <div class="container" style="margin: auto;">
+            <div class="row" style="margin: auto; justify-content: center;">
+                <div class="col-lg-4 col-sm-12">
+                    <h1>Opening Hours</h1>
+                    <p class="mt-3">Monday - Friday</p>
+                    <p style="margin-top: -20px;">08:00 AM - 07:00 PM</p>
+                    <p class="mt-2">Saturday - Sunday</p>
+                    <p style="margin-top: -20px;">09:00 AM - 07:00 PM</p>
+                </div>
+                <div class="col-lg-4 col-sm-12">
+                    <h1 class="mb-3">Contact Details</h1>
+                    <i class="fa-solid fa-phone"></i>
+                    <p>469-320-0321</p>
+                    <i class="fa-solid fa-envelope" style="margin-top: -6px;"></i>
+                    <p style="margin-top: -10px;">ductscareinc@gmail.com</p>
+                </div>
+                <div class="col-lg-2 col-sm-12">
+                    <h1 class="mb-3">Social</h1>
+                    <i class="fa-brands fa-facebook-square"></i>
+                    <p>Facebook</p>
+                    <i class="fa-brands fa-twitter-square"></i>
+                    <p>Twitter</p>
+                    <i class="fa-brands fa-instagram-square"></i>
+                    <p>Instagram</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container cop123" id="cop123" style="display: none;">
+        <div class="copyright">
+            <h1>Copyright DuctsCare 2022 - Legal - Privacy Policy</h1>
+        </div>
+        <div class="dev">
+            <h2>Design & Developed by</h2><img src="Assets/Logo & icon/Dev.png" alt="">
+        </div>
+    </div>
+
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,544 @@
+/* .Banner {
+    background-image: url(../Assets/Backgrounds/Bannerimage.jpg);
+    background-position: center;
+    background-size: cover;
+} */
+
+.Bannerdetails {
+    padding-top: 10%;
+    padding-bottom: 10%;
+    text-align: center;
+}
+
+.Bannerdetails>h1 {
+    font-size: 5vw;
+    font-family: 'Oswald', sans-serif;
+    color: white;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.Bannerdetails>p {
+    font-size: 1.5vw;
+    font-family: 'Roboto', sans-serif;
+    color: rgb(212, 209, 209);
+    letter-spacing: 2px;
+}
+
+.Banner-Button {
+    background-color: rgba(255, 255, 255, 0.897);
+    width: auto;
+    height: 50px;
+    border: none;
+    outline: none;
+    border-radius: 30px;
+    font-size: 18px;
+    margin-right: 10px;
+    margin-top: 0px;
+    padding-left: 40px;
+    padding-right: 40px;
+    font-family: 'Nunito', sans-serif;
+    color: #02243a;
+    transition: 0.3s;
+}
+
+.Banner-Button:focus {
+    border: none;
+    outline: none;
+}
+
+@media only screen and (max-width: 891px) {
+    .Banner>img {
+        width: auto;
+        height: 50%;
+    }
+
+    .Bannerdetails {
+        text-align: center;
+        margin-left: 0%;
+        padding-top: 30%;
+        padding-bottom: 31%;
+    }
+
+    .Bannerdetails>h1 {
+        font-size: 12vw;
+    }
+
+    .Bannerdetails>h2 {
+        font-size: 27px;
+        letter-spacing: 1px;
+        margin-top: -2%;
+    }
+
+    .Bannerdetails>p {
+        font-size: 15px;
+        margin-top: 0%;
+        width: 80%;
+        text-align: center;
+        margin: auto;
+        margin-bottom: 10px;
+        font-family: 'Roboto', sans-serif;
+
+    }
+}
+
+.firstdiv {
+    background-image: url(../Assets/Material/1.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.137);
+}
+
+@media only screen and (max-width: 991px) {
+    .firstdiv {
+        width: 100%;
+        border-radius: 0px;
+        height: 500px;
+    }
+}
+
+.FirstDiv>h1 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 40px;
+    font-weight: bold;
+    color: #02243af1;
+    letter-spacing: 1px;
+}
+
+.FirstDiv>p {
+    margin-top: 20px;
+    font-size: 18px;
+    color: rgb(78, 78, 78);
+    font-weight: 400;
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.75em;
+}
+
+.Benefits {
+    background-color: #02243a;
+    width: 100%;
+    height: auto;
+    padding-top: 70px;
+    padding-bottom: 70px;
+    color: white;
+}
+
+.Benefits-Left {
+    border: 4px solid white;
+    border-right: 0px;
+    padding-right: 40px;
+    padding-left: 40px;
+    padding-top: 20px;
+    padding-bottom: 30px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.Benefits-Right {
+    border: 4px solid white;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 20px;
+    padding-bottom: 30px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+@media only screen and (max-width: 991px) {
+    .Benefits-Left {
+        border: 4px solid white;
+        border-radius: 10px;
+        margin: 10px;
+    }
+
+    .Benefits-Right {
+        border: 4px solid white;
+        border-radius: 10px;
+        margin: 10px;
+    }
+}
+
+.Benefits-Right>h1,
+.Benefits-Left>h1 {
+    font-size: 35px;
+    font-family: 'Oswald';
+    padding-top: 20px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+.Benefits-Right>i,
+.Benefits-Left>i {
+    float: left;
+    padding-top: 1px;
+}
+
+.Benefits-Right>p,
+.Benefits-Left>p {
+    font-size: 17px;
+    font-family: 'Roboto', sans-serif;
+
+    padding-top: 20px;
+    padding-bottom: 5px;
+    letter-spacing: 0.5px;
+}
+
+.Benefits-Right>h2,
+.Benefits-Left>h2 {
+    font-weight: 700;
+    color: rgb(255, 255, 255);
+    font-size: 16px;
+    letter-spacing: 1px;
+    line-height: 1.75em;
+    font-family: 'Oswald';
+    padding-left: 22px;
+}
+
+.Whyus {
+    background-color: #62E1E8;
+    color: rgb(39, 39, 39);
+    padding-top: 50px;
+    padding-bottom: 50px;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+.Whyus>h1 {
+    font-size: 35px;
+    font-family: 'Oswald';
+    font-weight: 600;
+    line-height: 1.25em;
+}
+
+.Whyus>p {
+    font-size: 16px;
+    font-family: 'Roboto', sans-serif;
+    padding-top: 18px;
+    padding-bottom: 5px;
+    letter-spacing: 0.5px;
+}
+
+.Whyus>h2 {
+    font-family: 'Oswald';
+    font-weight: 700;
+    font-size: 16px;
+    letter-spacing: 0.02em;
+    line-height: 1.75em;
+    padding-left: 22px;
+}
+.Whyus>i {
+    float: left ;
+}
+
+.whyusimage {
+    background-image: url(../Assets/Material/2.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.13);
+}
+
+.Banner2 {
+    margin: 0px;
+    padding-left: 0px;
+    padding-right: 1px;
+
+    
+}
+
+.Banner2>img {
+    width: 100%;
+    height: auto;
+    box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.185);
+    
+}
+
+.animation {
+    animation: myfirst 2s;
+    position: relative;
+    animation-direction: normal;
+}
+
+@keyframes myfirst {
+    0% {
+        left: -1000px;
+        top: 0px;
+    }
+
+    100% {
+        left: 0px;
+        top: 0px;
+    }
+}
+
+.Banner2-Details {
+    padding: 40px;
+    background-color: #02243a;
+    height: auto;
+    color: white;
+    box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.185);
+
+}
+
+.animation2 {
+    animation: mytwo 2s;
+    position: relative;
+    animation-direction: normal;
+}
+
+@keyframes mytwo {
+    0% {
+        right: -1000px;
+        top: 0px;
+    }
+
+    100% {
+        right: 0px;
+        top: 0px;
+    }
+}
+
+@media only screen and (max-width: 991px) {
+    .Banner2-Details {
+        margin-top: 20px;
+        padding: 50px;
+
+    }
+}
+
+.Banner2-Details>h1 {
+    font-family: 'Oswald';
+    font-weight: 700;
+    color: rgb(255, 255, 255);
+    font-size: 35px;
+    line-height: 1.25em;
+    margin-bottom: 25px;
+    letter-spacing: 2px;
+}
+
+.Banner2-Details>p {
+    font-size: 17px;
+    font-family: 'Roboto', sans-serif;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    letter-spacing: 0.5px;
+
+}
+
+.Banner2-Details>h2 {
+    font-family: 'Oswald';
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 1.2em;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+    padding-left: 22px;
+}
+.Banner2-Details>i{
+    float: left;
+    padding-top: 5px;
+}
+.save {
+    margin-top: 50px;
+    width: auto;
+    background-color: #62E1E8;
+    color: #02243a;
+    border-radius: 10px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.save>h1 {
+    font-family: 'Oswald';
+    font-weight: 700;
+    font-size: 25px;
+    line-height: 1.25em;
+    margin-bottom: 20px;
+}
+
+/* Reviews CSS */
+.carousel>h1 {
+    font-size: 50px;
+    font-family: 'Oswald';
+    font-weight: 700;
+    background-color: #02243a;
+    color: white;
+    text-align: center;
+    width: 100%;
+    padding-top: 50px;
+    position: absolute;
+    z-index: 9999;
+    margin: auto;
+    justify-content: center;
+}
+
+.carousel-indicators>li {
+    width: 15px;
+    height: 15px;
+    border: 1px solid rgba(255, 255, 255, 0);
+    border-radius: 50px;
+}
+
+.carousel-indicators>.active {
+    background-color: #62E1E8;
+
+}
+
+.carousel-inner {
+    text-align: center;
+    background-color: #02243a;
+    color: #ffffff;
+    width: 100%;
+    height: 570px;
+    padding-top: 150px;
+    padding-bottom: 100px;
+}
+
+.Reviews {
+    margin-top: 10px;
+}
+
+.ReviewSection {
+    margin-top: 10px;
+}
+
+.ReviewSection>h2 {
+    font-family: 'Oswald';
+    font-weight: 700;
+    font-size: 35px;
+    color: Gold;
+}
+
+.ReviewSection>i {
+    font-size: 20px;
+    color: Gold;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.ReviewSection>p {
+    font-family: 'Roboto';
+    font-size: 18px;
+}
+
+@media only screen and (max-width: 991px) {
+    .carousel-control-prev {
+        display: none;
+    }
+
+    .carousel-control-next {
+        display: none;
+    }
+
+    .Reviews {
+        width: 200%;
+    }
+
+    .carousel-item>.container {
+        margin: 0;
+        padding: 0;
+    }
+    .carousel-inner {
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+    .carousel>h1 {
+        font-size: 45px;
+        font-family: 'Oswald';
+    }
+}
+
+/* Service Details CSS */
+.service-right {
+    border: 3px solid white;
+    padding: 50px;
+    text-align: center;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.service-left {
+    border: 3px solid white;
+    padding: 50px;
+    text-align: center;
+    border-right: 0px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+@media only screen and (max-width: 991px) {
+    .service-left {
+        border-right: solid white 3px;
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
+        margin: 10px;
+    }
+
+    .service-right {
+        margin-top: 20px;
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
+        margin: 10px;
+    }
+}
+
+.service-right>h1,
+.service-left>h1 {
+    font-family: 'Oswald';
+    font-weight: 700;
+    font-size: 35px;
+    line-height: 1.25em;
+    margin-bottom: 25px;
+    letter-spacing: 2px;
+}
+
+.service-right>p,
+.service-left>p {
+    font-size: 16px;
+    padding-top: 20px;
+    margin-bottom: 40px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.service-right>a,
+.service-left>a {
+    background-color: #62E1E8;
+    color: #02243a;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 20px;
+    padding-top: 10px;
+    padding-bottom: 14px;
+    padding-left: 30px;
+    padding-right: 30px;
+    border-radius: 30px;
+}
+
+/* Service Locations CSS */
+.SL-Details {
+    border: 2px solid #02243a0a;
+    width: 100%;
+    height: 230px;
+    margin-bottom: 15px;
+    text-align: left;
+    padding-top: 30px;
+    padding-right: 25px;
+    padding-left: 30px;
+    box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.13);
+}
+
+.SL-Details>h1 {
+    color: #02243a;
+    font-family: 'Oswald';
+    font-weight: 700;
+    font-size: 35px;
+    line-height: 1.25em;
+    margin-bottom: 10px;
+}
+
+.SL-Details>p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    padding-bottom: 10px;
+}
