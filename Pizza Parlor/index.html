@@ -1,0 +1,719 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="CSS/Stylesheet.css" />
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Oswald" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto" rel="stylesheet">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <script src="Javascript/script.js"></script>
+    <title>Home</title>
+
+</head>
+
+<body>
+    <nav id="navbartop" class="navbar navbar-expand-lg">
+        <div class="container">
+            <a class="navbar-brand " href="#"><img src="Assets/Logo.png" class="Logo" alt=""></a>
+            <button onclick="shownavbar()" class="navbar-toggler" type="button" data-toggle="collapse"
+                data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon">
+                    <div class="icon menu1">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </span>
+            </button>
+            <ul class="navbar-nav ml-auto mr-0 pcnavbar">
+                <li class="nav-item ">
+                    <a class="nav-link" id="Homeactive" href="#section1" style="color: red; font-weight: 700;">HOME</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="Aboutactive" href="#section2">ABOUT</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="Menuactive" href="#section3">MENU</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="Galleryactive" href="#section4">GALLERY</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" onclick="callfororder()" href="#">CONTACT</a>
+                </li>
+                <li class="nav-item Orderbutton" onclick="opencart()">
+                    <a class="nav-link" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                            fill="currentColor" class="bi bi-cart" viewBox="0 0 16 16">
+                            <path
+                                d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
+                        </svg>Cart</a>
+                    <div class="ordercount">
+                        <h1 id="itemsnumbers">0</h1>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        </div>
+    </nav>
+    <div class="mobilenavbar" id="mobilenavbar" style="margin-left: -600px;">
+        <ul class="navbar-nav ml-auto mr-0">
+            <li class="nav-item Orderbutton" onclick="opencart()">
+                <a class="nav-link" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                        fill="currentColor" class="bi bi-cart" viewBox="0 0 16 16">
+                        <path
+                            d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
+                    </svg>Cart (<span id="itemsnumbersm">0</span>)</a>
+            </li>
+            <li class="nav-item mt-3">
+                <a class="nav-link" href="#section1" onclick="hidenavbar()" id="Homeactivem" style="color: red; font-weight: 700;">HOME</a>
+            </li>
+            <li class="nav-item mt-3">
+                <a class="nav-link" href="#section2"  onclick="hidenavbar()" id="Aboutactivem">ABOUT</a>
+            </li>
+            <li class="nav-item mt-3">
+                <a class="nav-link" href="#section3"  onclick="hidenavbar()" id="Menuactivem">MENU</a>
+            </li>
+            <li class="nav-item mt-3">
+                <a class="nav-link" id="Galleryactivem"  onclick="hidenavbar()" href="#section4">GALLERY</a>
+            </li>
+            <li class="nav-item mt-3">
+                <a class="nav-link"   onclick="callfororder(),hidenavbar() " href="#">CONTACT</a>
+            </li>
+
+        </ul>
+    </div>
+
+    <div class="alertbox" id="alerts"></div>
+    <div class="cartbox cart-container" id="cartbox">
+        <h1>Your Order</h1>
+        <div class="tablehead">
+            <h1>Items</h1>
+            <h2>Price</h2>
+        </div>
+        <div class="tablebody" id="carttable">
+        </div>
+        <div class="tablebottom" id="carttotals">
+            <h1>Items</h1>
+            <h2><span id="itemsquantity">0</span></h1>
+            <h1>Total Ammount</h1>
+            <h2>$<span id="total">0</span></h2>
+            <h1 style="background-color: rgb(238, 208, 208);">After 10% Discount</h1>
+            <h2 style="background-color: rgb(238, 208, 208);">$<span id="discountedtotal">0</span></h2>
+        </div>
+
+        <div class="cartbox-btn mb-2 cart-buttons">
+            <button class="orderbtn" onclick="callfororder(),window.open('tel:705-741-1411')">Call For Order</button>
+            <button class="clearbtn" id="emptycart">Clear</button>
+            <button class="closebtn" onclick="closecart()">Close</button>
+        </div>
+    </div>
+    <div class="callnow" id="callnow" style="display: none;">
+
+        <svg class="phone" xmlns="http://www.w3.org/2000/svg" width="100%" height="70px" fill="currentColor" class="bi bi-telephone-outbound-fill" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511zM11 .5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 .5.5v4a.5.5 0 0 1-1 0V1.707l-4.146 4.147a.5.5 0 0 1-.708-.708L14.293 1H11.5a.5.5 0 0 1-.5-.5z"/>
+          </svg>
+          <svg class="crosscall" onClick="closephone()" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-circle-fill" viewBox="0 0 16 16">
+            <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM5.354 4.646a.5.5 0 1 0-.708.708L7.293 8l-2.647 2.646a.5.5 0 0 0 .708.708L8 8.707l2.646 2.647a.5.5 0 0 0 .708-.708L8.707 8l2.647-2.646a.5.5 0 0 0-.708-.708L8 7.293 5.354 4.646z"/>
+          </svg>
+          <h1>Call Us Now</h1>
+          <h2>705-741-1411</h2>
+    </div>
+    <div class="banner" id="section1">
+        <div class="BannerHead">
+            <h1>Pizza <span>Parlor</span></h1>
+            <p class='typewriter'>The Taste Of <span class='typewriter-text'
+                    data-text='[ "Happiness! ", "Joyness! ", "Lovelyness!" ]'></span></p>
+            <div class="Orderbannerbutton">
+                <a class="" href="#section3">ORDER NOW</a>
+            </div>
+            <div class="scrolloption">
+                <aside class="mouse">
+                    <div class="help-mouse-down"><i class="help-mouse-wheel"></i></div><span class="help-down"></span>
+                    <p>Scroll</p>
+                </aside>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container Sections" id="section2" style="padding-top:270px; padding-bottom:270px;">
+        <div class="row">
+            <div class="col-lg-7 col-sm-12">
+                <div class="text-Section" id="about">
+                    <h1 class="mb-4">About Us</h1>
+                    <h2 class="mb-2">At Pizza Parlor, you'll be able to make your dream pizza happen.
+                    </h2>
+                    <p> Start with the size you need,
+                        and build on from there. With the extend of fried chicken with sauces, meat, and veggies you'll
+                        create endless combinations and get fair what you need. Don’t disregard to include your favorite
+                        sideline and a drink for a idealize meal. Here you'll be able ended up a portion of our world,
+                        appreciate and share it together with your friends and family.</p>
+                </div>
+            </div>
+            <div class="col-lg-5 col-sm-12">
+                <div class="image-Section">
+                    <img src="https://www.pngkit.com/png/full/43-430270_pizza-transparent-pasta-pizza-and-pasta-png.png"
+                        alt="" width="100%" height="auto">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="banner2" id="section3">
+        <div class="heading">
+            <h1><span>MENU</span></h1>
+        </div>
+    </div>
+    <div class="container Sections2" id="section3">
+        <div class="tabs">
+            <input type="radio" id="radio-1" onclick="showdeals()" name="tabs" checked />
+            <label class="tab" for="radio-1">Deals</label>
+            <input type="radio" id="radio-2" onclick="showmenu()" name="tabs" />
+            <label class="tab" for="radio-2">Menu</label>
+            <span class="glider"></span>
+        </div>
+    </div>
+    <div class="container mb-5" id="deals">
+        <div class="heading2">
+            <h1><span>Monday & Tuesday Specials</span></h1>
+        </div>
+        <div class="row p-0 productcont">
+
+            <div class=" col-lg-4 col-md-6 col-sm-12">
+                <div class="saucesbox">
+                    <div class="details  product product">
+                        <img src="Assets/Products/MT (3).png" alt="">
+                        <h1 class="productname">2 Medium Pizzas</h1>
+                        <h2>2 Medium Pizzas + 3 Toppings</h2>
+                        <p class="price">$22.99</p>
+                        <button class="addtocart" onClick="showMessage()">Add to Cart</button>
+                    </div>
+
+                </div>
+            </div>
+            <div class=" col-lg-4 col-md-6 col-sm-12">
+                <div class="saucesbox">
+                    <div class="details  product product">
+                        <img src="Assets/Products/MT (1).png" alt="">
+                        <h1 class="productname">2 Large Pizzas</h1>
+                        <h2>2 Large Pizzas + 3 Toppings</h2>
+                        <p class="price">$26.99</p>
+                        <button class="addtocart" onclick="showMessage()">Add to Cart</button>
+                    </div>
+
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-12">
+                <div class="saucesbox">
+                    <div class="details  product product">
+                        <img src="Assets/Products/MT (2).png" alt="">
+                        <h1 class="productname">2 X-Large Pizzas</h1>
+                        <h2>2 X-Large Pizzas + 3 Toppings</h2>
+                        <p class="price">$30.99</p>
+                        <button class="addtocart" onclick="showMessage()">Add to Cart</button>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+        <div class="heading2">
+            <h1><span>Regular Deals</span></h1>
+        </div>
+        <div class="row p-0">
+            <div class=" col-lg-4 col-md-6 col-sm-12">
+                <div class="dealbox">
+                    <div class="details  product product">
+                        <img src="Assets/Products/FamilyMeal.png" alt="">
+                        <h1 class="productname">Family Meal Deal</h1>
+                        <h2>12 pcs chicken (leg + thigh only) + Fries + 2L Pop</h2>
+                        <p class="price">$39.99</p>
+                        <button class="addtocart" onclick="showMessage()">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class=" col-lg-4 col-md-6 col-sm-12">
+                <div class="dealbox">
+                    <div class="details  product product">
+                        <img src="Assets/Products/pizzaewings.png" alt="">
+                        <h1 class="productname">Pizza & Wings</h1>
+                        <h2>12" Speciality Pizza + 10 Chicken Wings + 1 Can of Pop + 1 Dipping Sauce</h2>
+                        <p class="price">$22.99</p>
+                        <button class="addtocart" onclick="showMessage()">Add to Cart</button>
+                    </div>
+
+                </div>
+            </div>
+            <div class=" col-lg-4 col-md-6 col-sm-12">
+                <div class="dealbox">
+                    <div class="details  product product">
+                        <img src="Assets/Products/Selfideal.png" alt="">
+                        <h1 class="productname">Selfi Deal</h1>
+                        <h2>10" Speciality Pizza + 6 Chicken Wings + 1 Can of Pop</h2>
+                        <p class="price">$16.99</p>
+                        <button class="addtocart" onclick="showMessage()">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class=" col-lg-4 col-md-6 col-sm-12">
+                <div class="dealbox">
+                    <div class="details  product product">
+                        <img src="Assets/Products/lUNCH.png" alt="">
+                        <h1 class="productname">Launch Special</h1>
+                        <h2>14" Pizza + 3 toppings</h2>
+                        <p class="price">$11.99</p>
+                        <button class="addtocart" onclick="showMessage()">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class=" col-lg-4 col-md-6 col-sm-12">
+                <div class="dealbox">
+                    <div class="details  product product">
+                        <img src="Assets/Products/cOMBO 1.png" alt="">
+                        <h1 class="productname">Combo 1</h1>
+                        <h2>8pcs Chicken (leg & thigh only) + Fries + 2 Pop</h2>
+                        <p class="price">$26.99</p>
+                        <button class="addtocart" onclick="showMessage()">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class=" col-lg-4 col-md-6 col-sm-12">
+                <div class="dealbox">
+                    <div class="details  product">
+                        <img src="Assets/Products/cOMBO2.png" alt="">
+                        <h1 class="productname">Combo 2</h1>
+                        <h2>3 pcs Chicken (leg & thigh only) + Fries + 1 Pop</h2>
+                        <p class="price">$12.49</p>
+                        <button class="addtocart" onclick="showMessage()">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class=" col-lg-4 col-md-6 col-sm-12">
+                <div class="dealbox">
+                    <div class="details  product">
+                        <img src="Assets/Products/2candine.png" alt="">
+                        <h1 class="productname">2 Can Dine</h1>
+                        <h2>6 pcs Chicken (leg & thigh only) + Fries + 2 Pop</h2>
+                        <p class="price">$19.99</p>
+                        <button class="addtocart" onclick="showMessage()">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class=" col-lg-4 col-md-6 col-sm-12">
+                <div class="dealbox">
+                    <div class="details  product">
+                        <img src="Assets/Products/Monday.png" alt="">
+                        <h1 class="productname">Monday Special</h1>
+                        <h2>2 pcs Chicken (leg & thigh only) + Fries + 1 Pop</h2>
+                        <p class="price">$7.99</p>
+                        <button class="addtocart" onclick="showMessage()">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container mb-5" id="menu" style="display: none;">
+        <div class="heading2">
+            <h1><span>Pizza</span></h1>
+        </div>
+
+        <div class="row p-0">
+            <div class=" col-lg-4 col-md-6 col-sm-12">
+                <div class=" pizzabox">
+                    <div class="details  product">
+                        <img src="Assets/Products/PIZZA (5).png" alt="">
+                        <h1 class="productname">10" Pizza</h1>
+                        <h2>With Unlimited Toppings (Delivery charges may apply.)</h2>
+                        <p class="price">$10.99</p>
+                        <button class="addtocart" onclick="showMessage()">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class=" col-lg-4 col-md-6 col-sm-12">
+                <div class=" pizzabox">
+                    <div class="details  product">
+                        <img src="Assets/Products/PIZZA (4).png" alt="">
+                        <h1 class="productname">12" Pizza</h1>
+                        <h2>With Unlimited Toppings (Delivery charges may apply.)</h2>
+                        <p class="price">$14.99</p>
+                        <button class="addtocart" onclick="showMessage()">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class=" col-lg-4 col-md-6 col-sm-12">
+                <div class=" pizzabox">
+                    <div class="details  product">
+                        <img src="Assets/Products/PIZZA (3).png" alt="">
+                        <h1 class="productname">14" Pizza</h1>
+                        <h2>With Unlimited Toppings (Delivery charges may apply.)</h2>
+                        <p class="price">$16.99</p>
+                        <button class="addtocart" onclick="showMessage()">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class=" col-lg-4 col-md-6 col-sm-12">
+                <div class=" pizzabox">
+                    <div class="details  product">
+                        <img src="Assets/Products/PIZZA (2).png" alt="">
+                        <h1 class="productname">16" Pizza</h1>
+                        <h2>With Unlimited Toppings (Delivery charges may apply.)</h2>
+                        <p class="price">$19.99</p>
+                        <button class="addtocart" onclick="showMessage()">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class=" col-lg-4 col-md-6 col-sm-12">
+                <div class=" pizzabox">
+                    <div class="details  product">
+                        <img src="Assets/Products/PIZZA (1).png" alt="">
+                        <h1 class="productname">18" Pizza</h1>
+                        <h2>With Unlimited Toppings (Delivery charges may apply.)</h2>
+                        <p class="price">$23.99</p>
+                        <button class="addtocart" onclick="showMessage()">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class=" col-lg-4 col-md-6 col-sm-12">
+                <div class=" pizzabox">
+                    <div class="details  product">
+                        <img src="Assets/Products/Pizza (6).png" alt="">
+                        <h1 class="productname" style="font-size: 28px;">12" Gluten Free Pizza </h1>
+                        <h2>With Unlimited Toppings (Delivery charges may apply.)</h2>
+                        <p class="price">$14.99</p>
+                        <button class="addtocart" onclick="showMessage()">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="heading2">
+            <h1><span>Giant Pizza Slice</span></h1>
+        </div>
+
+        <div class="row p-0">
+            <div class=" col-lg-4 col-md-6 col-sm-12">
+                <div class=" saucesbox">
+                    <div class="details  product">
+                        <img src="Assets/Products/Slice (2).png" alt="">
+                        <h1 class="productname">1 Slice</h1>
+                        <h2>1 Slice of Giant Pizza</h2>
+                        <p class="price">$3.00</p>
+                        <button class="addtocart" onclick="showMessage()">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class=" col-lg-4 col-md-6 col-sm-12">
+                <div class=" saucesbox">
+                    <div class="details  product">
+                        <img src="Assets/Products/Slice (1).png" alt="">
+                        <h1 class="productname">1 Slice & Pop</h1>
+                        <h2>1 Slice of Giant Pizza + Pop</h2>
+                        <p class="price">$4.00</p>
+                        <button class="addtocart" onclick="showMessage()">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class=" col-lg-4 col-md-6 col-sm-12">
+                <div class=" saucesbox">
+                    <div class="details  product">
+                        <img src="Assets/Products/Slice (3).png" alt="">
+                        <h1 class="productname">2 Slices & Pop</h1>
+                        <h2>2 Slices of Giant Pizza + Pop</h2>
+                        <p class="price">$7.00</p>
+                        <button class="addtocart" onclick="showMessage()">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="heading2">
+            <h1><span>Breads</span></h1>
+        </div>
+        <div class="row p-0">
+            <div class=" col-lg-4 col-md-6 col-sm-12">
+                <div class="dealbox">
+                    <div class="details  product">
+                        <img src="Assets/Products/BrEAD (1).png" alt="">
+                        <h1 class="productname">Garlic Cheese Bread</h1>
+                        <h2>8 pieces Garlic Cheese Bread + 1 Marinara Sauce</h2>
+                        <p class="price">$6.99</p>
+                        <button class="addtocart" onclick="showMessage()">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class=" col-lg-4 col-md-6 col-sm-12">
+                <div class="dealbox">
+                    <div class="details  product">
+                        <img src="Assets/Products/BrEAD (2).png" alt="">
+                        <h1 class="productname" style="font-size: 24px;">Garlic Cheese Bread With Beacon</h1>
+                        <h2>8 pieces Garlic Cheese Bread With Beacon + 1 Marinara Sauce</h2>
+                        <p class="price">$8.99</p>
+                        <button class="addtocart" onclick="showMessage()">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class=" col-lg-4 col-md-6 col-sm-12">
+                <div class="dealbox">
+                    <div class="details  product">
+                        <img src="Assets/Products/BREADSTICKS.png" alt="">
+                        <h1 class="productname">Bread Sticks</h1>
+                        <h2>8 pieces Bread Sticks + 1 Marinara Sauce</h2>
+                        <p class="price">$4.99</p>
+                        <button class="addtocart" onclick="showMessage()">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="heading2">
+            <h1><span>Dipping Sauces</span></h1>
+        </div>
+
+        <div class="row p-0">
+            <div class=" col-lg-4 col-md-6 col-sm-12">
+                <div class=" saucesbox">
+                    <div class="details  product">
+                        <img src="Assets/Products/Dip (1).png" alt="">
+                        <h1 class="productname">Marinara</h1>
+                        <h2>1 Marinara Sauce</h2>
+                        <p class="price">$0.99</p>
+                        <button class="addtocart" onclick="showMessage()">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class=" col-lg-4 col-md-6 col-sm-12">
+                <div class=" saucesbox">
+                    <div class="details  product">
+                        <img src="Assets/Products/Dip (2).png" alt="">
+                        <h1 class="productname">Ranch</h1>
+                        <h2>1 Ranch Sauce</h2>
+                        <p class="price">$0.99</p>
+                        <button class="addtocart" onclick="showMessage()">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class=" col-lg-4 col-md-6 col-sm-12">
+                <div class=" saucesbox">
+                    <div class="details  product">
+                        <img src="Assets/Products/Dip (4).png" alt="">
+                        <h1 class="productname">Cheddar Chipotle</h1>
+                        <h2>1 Cheddar Chipotle Sauce</h2>
+                        <p class="price">$0.99</p>
+                        <button class="addtocart" onclick="showMessage()">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class=" col-lg-4 col-md-6 col-sm-12">
+                <div class=" saucesbox">
+                    <div class="details  product">
+                        <img src="Assets/Products/Dip (5).png" alt="">
+                        <h1 class="productname">Creamy Garlic</h1>
+                        <h2>1 Creamy Garlic Sauce</h2>
+                        <p class="price">$0.99</p>
+                        <button class="addtocart" onclick="showMessage()">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class=" col-lg-4 col-md-6 col-sm-12">
+                <div class=" saucesbox">
+                    <div class="details  product">
+                        <img src="Assets/Products/Dip (3).png" alt="">
+                        <h1 class="productname">Sweet Donair</h1>
+                        <h2>1 Sweet Donair Sauce</h2>
+                        <p class="price">$0.99</p>
+                        <button class="addtocart" onclick="showMessage()">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="heading2">
+            <h1><span>Salads</span></h1>
+        </div>
+
+        <div class="row p-0">
+            <div class=" col-lg-4 col-md-6 col-sm-12">
+                <div class=" saucesbox">
+                    <div class="details  product">
+                        <img src="Assets/Products/Salad (3).png" alt="">
+                        <h1 class="productname">Caesar Salad</h1>
+                        <h2>1 Caesar Salad</h2>
+                        <p class="price">$6.99</p>
+                        <button class="addtocart" onclick="showMessage()">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class=" col-lg-4 col-md-6 col-sm-12">
+                <div class=" saucesbox">
+                    <div class="details  product">
+                        <img src="Assets/Products/Salad (2).png" alt="">
+                        <h1 class="productname">Chicken Caesar Salad</h1>
+                        <h2>1 Chicken Caesar Salad</h2>
+                        <p class="price">$8.99</p>
+                        <button class="addtocart" onclick="showMessage()">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class=" col-lg-4 col-md-6 col-sm-12">
+                <div class=" saucesbox">
+                    <div class="details  product">
+                        <img src="Assets/Products/Salad (1).png" alt="">
+                        <h1 class="productname">Greek Salad</h1>
+                        <h2>1 Greek Salad</h2>
+                        <p class="price">$6.99</p>
+                        <button class="addtocart" onclick="showMessage()">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class=" col-lg-4 col-md-6 col-sm-12">
+                <div class=" saucesbox">
+                    <div class="details  product">
+                        <img src="Assets/Products/Salad (4).png" alt="">
+                        <h1 class="productname">Tossed Salad</h1>
+                        <h2>1 Tossed Salad</h2>
+                        <p class="price">$6.99</p>
+                        <button class="addtocart" onclick="showMessage()">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="banner3" id="section4">
+        <div class="heading">
+            <h1><span>GALLERY</span></h1>
+        </div>
+    </div>
+    <div class="container Sections" id="section2" style="padding-top:270px; padding-bottom:270px;">
+        <!-- Gallery -->
+        <div class="row">
+            <div class="col-lg-4 col-md-12 mb-4 mb-lg-0">
+                <img src="Assets/Gallery/Gallery (1).jpeg" class="w-100 shadow-1-strong rounded mb-4" />
+                <img src="Assets/Gallery/Gallery (26).jpeg" class="w-100 shadow-1-strong rounded mb-4" />
+            </div>
+            <div class="col-lg-4 col-md-12 mb-4 mb-lg-0">
+                <img src="Assets/Gallery/Gallery (27).jpeg" class="w-100 shadow-1-strong rounded mb-4" />
+                <img src="Assets/Gallery/Gallery (2).jpeg" class="w-100 shadow-1-strong rounded mb-4" />
+            </div>
+            <div class="col-lg-4 col-md-12 mb-4 mb-lg-0">
+                <img src="Assets/Gallery/Gallery (11).jpeg" class="w-100 shadow-1-strong rounded mb-4" />
+                <img src="Assets/Gallery/Gallery (7).jpeg" class="w-100 shadow-1-strong rounded mb-4" />
+            </div>
+            <div class="col-lg-4 col-md-12 mb-4 mb-lg-0">
+                <img src="Assets/Gallery/Gallery (10).jpeg" class="w-100 shadow-1-strong rounded mb-4" />
+                <img src="Assets/Gallery/Gallery (5).jpeg" class="w-100 shadow-1-strong rounded mb-4" />
+            </div>
+            <div class="col-lg-4 col-md-12 mb-4 mb-lg-0">
+                <img src="Assets/Gallery/Gallery (17).jpeg" class="w-100 shadow-1-strong rounded mb-4" />
+                <img src="Assets/Gallery/Gallery (21).jpeg" class="w-100 shadow-1-strong rounded mb-4" />
+            </div>
+            <div class="col-lg-4 col-md-12 mb-4 mb-lg-0">
+                <img src="Assets/Gallery/Gallery (18).jpeg" class="w-100 shadow-1-strong rounded mb-4" />
+                <img src="Assets/Gallery/Gallery (22).jpeg" class="w-100 shadow-1-strong rounded mb-4" />
+            </div>
+            <div class="col-lg-12 col-md-12 mb-4 mb-lg-0">
+                <img src="Assets/Gallery/Gallery (16).jpeg" class="w-100 shadow-1-strong rounded mb-4" />
+            </div>
+            <div class="col-lg-6 col-md-12 mb-4 mb-lg-0">
+                <img src="Assets/Gallery/Gallery (12).jpeg" class="w-100 shadow-1-strong rounded mb-4" />
+            </div>
+            <div class="col-lg-6 col-md-12 mb-4 mb-lg-0">
+                <img src="Assets/Gallery/Gallery (25).jpeg" class="w-100 shadow-1-strong rounded mb-4" />
+            </div>
+
+            <div class="col-lg-4 col-md-12 mb-4 mb-lg-0">
+                <img src="Assets/Gallery/Gallery (4).jpeg" class="w-100 shadow-1-strong rounded mb-4" />
+                <img src="Assets/Gallery/Gallery (8).jpeg" class="w-100 shadow-1-strong rounded mb-4" />
+            </div>
+            <div class="col-lg-4 col-md-12 mb-4 mb-lg-0">
+                <img src="Assets/Gallery/Gallery (6).jpeg" class="w-100 shadow-1-strong rounded mb-4" />
+                <img src="Assets/Gallery/Gallery (9).jpeg" class="w-100 shadow-1-strong rounded mb-4" />
+
+            </div>
+            <div class="col-lg-4 col-md-12 mb-4 mb-lg-0">
+                <img src="Assets/Gallery/Gallery (19).jpeg" class="w-100 shadow-1-strong rounded mb-4" />
+                <img src="Assets/Gallery/Gallery (28).jpeg" class="w-100 shadow-1-strong rounded mb-4" />
+            </div>
+            <div class="col-lg-12 col-md-12 mb-4 mb-lg-0">
+                <img src="Assets/Gallery/Gallery (20).jpeg" class="w-100 shadow-1-strong rounded mb-4" />
+            </div>
+            <div class="col-lg-4 col-md-12 mb-4 mb-lg-0">
+                <img src="Assets/Gallery/Gallery (15).jpeg" class="w-100 shadow-1-strong rounded mb-4" />
+            </div>
+            <div class="col-lg-4 col-md-12 mb-4 mb-lg-0">
+                <img src="Assets/Gallery/Gallery (24).jpeg" class="w-100 shadow-1-strong rounded mb-4" />
+            </div>
+            <div class="col-lg-4 col-md-12 mb-4 mb-lg-0">
+                <img src="Assets/Gallery/Gallery (29).jpeg" class="w-100 shadow-1-strong rounded mb-4" />
+            </div>
+            <div class="col-lg-12 col-md-12 mb-4 mb-lg-0">
+                <img src="Assets/Gallery/Gallery (14).jpeg" class="w-100 shadow-1-strong rounded mb-4" />
+            </div>
+        </div>
+    </div>
+
+<div class="banner" style="height: auto; overflow: hidden;">
+
+    <div class="footer" id="footer">
+        <div class="container" style="margin: auto;">
+            <div class="row mt-0 p-0" style="margin: auto; justify-content: center;">
+                <div class="col-lg-6 col-sm-12">
+                    <h1>About Pizza Parlor</h1>
+                    <p>At Pizza Parlor, you'll be able to make your dream pizza happen. Start with the size you need,
+                        and build on from there. With the extend of fried chicken with sauces, meat, and veggies you'll
+                        create endless combinations and get fair what you need. Don’t disregard to include your favorite
+                        sideline and a drink for a idealize meal. Here you'll be able ended up a portion of our world,
+                        appreciate and share it together with your friends and family.</p>
+                </div>
+                <div class="col-lg-4 col-sm-12">
+                    <h1 class="mb-3">Contact Details</h1>
+                    <i class="fa-solid fa-phone"></i>
+                    <p>705-741-1411</p>
+                    <i class="fa-solid fa-envelope" style="margin-top: 1px;"></i>
+                    <p style="margin-top: -5px;">info@pizzaparlor.com</p>
+                    <i class="fa-solid fa-location-arrow" style="margin-top: 1px;"></i>
+                    <p style="margin-top: -5px;">304 George St. N. Unit#104, Peterborough, ON K9J 3H2</p>
+             
+                </div>
+                <div class="col-lg-2 col-sm-12">
+                    <h1 class="mb-3">Social</h1>
+                    <i class="fa-brands fa-facebook-square"></i>
+                    <p>Facebook</p>
+                    <i class="fa-brands fa-twitter-square"></i>
+                    <p>Twitter</p>
+                    <i class="fa-brands fa-instagram-square"></i>
+                    <p>Instagram</p>
+                    <i class="fa-brands fa-youtube"></i>
+                    <p>Youtube</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container cop123" id="cop123" >
+    <div class="copyright">
+        <h1>Copyright Pizza Parlor 2022 - Legal - Privacy Policy</h1>
+    </div>
+    <div class="dev">
+        <h2>Design & Developed by</h2><img src="Assets/Trademark.jpg" alt="">
+    </div>
+</div>
+    <script src="Javascript/script.js"></script>
+
+</body>
+
+</html>
